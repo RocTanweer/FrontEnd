@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Practical</title>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Your Details:</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required="required"> <br>  
+
+            <label for="em">Email:</label>
+            <input type="email" name="email" id="em" required="required">
+        </fieldset>
+
+        <fieldset>
+            <legend>Your Review:</legend>
+            <p>How did you hear anout us? 
+                <select name="src" id="src">
+                    <option aria-required="true" value="google">Google</option>
+                    <option aria-required="true" value="Facebook">Facebook</option>
+                    <option aria-required="true" value="YouTube">YouTube</option>
+                    <option aria-required="true" value="Twitter">Twitter</option>
+                    <option aria-required="true" value="Instagram">Instagram</option>
+                </select>
+            </p>
+
+            <p>Would you visit again?</p>
+            <p>
+                <input type="radio" name="answer" value="Yes" id="an" checked="checked">
+                <label for="an">Yes</label>
+                <input type="radio" name="answer" value="No" id="no">
+                <label for="no">No</label>
+                <input type="radio" name="answer" value="maybe" id="mb">
+                <label for="mb">Maybe</label>
+            </p>
+
+            <p>Comments:</p>
+            <p>
+                <textarea name="comment" id="cmt" cols="30" rows="10" placeholder="Your words..."></textarea>
+            </p>
+
+            <p><input type="checkbox" name="signup" checked="checked" id="ck">
+            <label for="ck">Sign me up for email updates</label></p>
+            <p><input type="submit" value="Submit review"></p>
+        </fieldset>
+    </form>
+</body>
+</html>
