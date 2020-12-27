@@ -1,0 +1,26 @@
+h1{
+    background-color: rgb(84, 130, 170);
+    color: white;
+}
+
+div.container{
+    margin: 50px 50px;
+    padding: 50px 50px;
+    background-color: grey;
+    height: 700px;
+}
+
+body{
+    background-color: tomato;
+    color: white;
+}
+
+p.redElement{
+    background-color: red;
+    color: wheat;
+}
+
+.bgblue{
+    background-color: blue;
+    color: wheat;
+}

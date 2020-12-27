@@ -1,0 +1,15 @@
+body{
+   background-color: #f5b4b4
+}
+
+h1 {
+    font-weight: bolder;
+    font: 30px solid red;
+    font-style: italic;
+}
+
+p{
+    background-color: pink;
+    font-style: italic;
+    color: black;
+}
