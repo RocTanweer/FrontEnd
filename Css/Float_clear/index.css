@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: rgba(255, 192, 203, 0.424);
+}
+
+.container {
+    border: 0px solid pink;
+    margin: 20px auto;
+    padding: 5px;
+    overflow: auto;
+    width: 1100px;
+    background-color: pink;
+    border-radius: 34px;
+}
+
+.item {
+    /* border: 2px solid rgb(195, 32, 32); */
+    margin: 5px;
+    padding: 15px;
+}
+
+#fruits {
+    float: left;
+    width: 48%;
+
+}
+
+#stationary {
+    float: left;
+    width: 50%;
+}
+
+#computer {
+    clear: both;
+    width: 99%;
+}
+
+.para {
+    word-spacing: 5px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-justify: auto;
+}
+
+h1 {
+
+    font-size: 50px;
+    font-weight: 1000;
+    margin: 10px 0px;
+    text-align: center;
+    letter-spacing: 3px;
+    word-spacing: 13px;
+
+}
+
+h2{
+    
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0px;
+    text-align: left;
+    letter-spacing: 2px;
+}
