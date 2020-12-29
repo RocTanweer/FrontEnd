@@ -65,14 +65,24 @@ a.nav-item{
     font-size: 20px;
     letter-spacing: 3px;
     color: #6a6969;
+    text-decoration: none;
 }
 
 a.nav-item:hover{
     text-decoration: underline;
 }
 
-a#active{
+a.nav-item:visited{
     text-decoration: underline;
+    font-size: 40px;
+}
+
+a.nav-item:active{
+    text-decoration: none;
+}
+
+a#active{
+    /* text-decoration: underline; */
 }
 
 main.container{
@@ -117,6 +127,7 @@ a.t-item{
     font-size: 16px;
     letter-spacing: 1px;
     color: #464646;
+    text-decoration: none;
 }
 
 a.t-item:hover{
@@ -124,6 +135,18 @@ a.t-item:hover{
     font-weight: bolder;
     font-size: 20px;
     color: #3f3e3e;
+}
+
+a.t-item:active{
+    text-decoration: none;
+}   
+
+a{
+    transition-duration: .1s;
+}
+
+a.t-item:visited{
+    /* color: yellow; */
 }
 
 article.article{
