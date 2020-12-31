@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Units</title>
+    <style>
+
+        html{
+            font-size: 10px;
+        }
+        .container{
+            border:2px solid black;
+            height: 99vh;
+            font-size:10px
+        }
+        h1{
+            text-align:center;
+        }
+        #first{
+            /* xem means that the element's size will be x times 
+            graeter than what is its parents's */
+            /* In case using it twice like in heading text and then 
+            for padding : the size of heading text will be x times parent's
+            and padding will be size of heading times padding size */
+            font-size:3em;
+            padding:3em; /*padding is 90px in this case*/
+        }
+
+        #second{
+            font-size: 12rem; /*font size is 120px according to font size in html element*/
+        }
+
+        /* vh -- viewport height -- 100 = full height*/
+        /* vw -- viewport width -- 100 = full width*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="third">This is third heading</h1>
+    </div>
+</body>
+</html>
