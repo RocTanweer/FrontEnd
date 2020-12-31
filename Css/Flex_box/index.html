@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .container{
+            /* Initialize the container as a flex container or flex box */
+            display:flex;
+
+
+            /* By default */
+            /* flex-direction:row;  */
+            /* flex-direction:column; */
+            /* flex-direction:row-reverse;  */
+            /* flex-direction:column-reverse; */
+
+
+
+            /* by default  */
+            /* flex-wrap:nowrap; */
+            /* flex-wrap:wrap; */
+
+
+
+            /* Instead of using flex-direction and flex-wrap we can use 
+            flex-flow : direction wrap/nowrap */
+            /* flex-flow: row-reverse wrap; */
+
+
+            /* Justify content deals in x axis */
+            /* justify-content: center; */
+            /*evenly spaced flex items excluding both ends*/
+            /* justify-content:space-around; */
+            /*evenly space around a flex item*/
+            /* justify-content:space-evenly;   */
+            /*evenly spaced flex items inluding both ends*/
+
+
+
+            /* align items deals in y axis */
+            /* by default */
+            /* align-items:flex-start;*/
+            /* align-items:center; */
+            /* align-items:flex-end;  */
+            /* same as justify-content:space-between; in vertical dir */
+            /* align-items:stretch; */
+
+            height:545px;
+            width:100%;
+            border:2px solid black;
+        }
+
+        .item{
+            width:200px;
+            height:200px;
+            background-color:tomato;
+            border:2px solid rgb(0, 255, 55);
+            margin:10px;
+            padding: 3px;
+        }
+
+        #item-1{
+            /* Order defines the number at which an item appear in flex box */
+            /* order: 8; */
+
+
+            /* flex grow is number of item's place an item will take if the flex box's size increases */
+
+
+            /* flex shrink is opp of flex grow */
+            /* flex-grow:2; */
+            /* flex-shrink:2; */
+
+            /* it manages a specific item's place from its original place */
+            /* align-self:flex-start; */
+            /* align-self:center; */
+        }
+        #item-2{
+            /* order: 23; */
+
+            /* flex-grow:2; 
+
+            flex-shrink:2;
+
+            /* It defines how much space an element will take in flex direction */
+            /*flex-basis:260px; */
+
+
+            /* flex : grow shrink width */
+            /* flex : 0 1 200px; */
+
+            /* align-self: center; */
+        }
+        #item-3{
+            /* order: 1; */
+           
+            
+
+            /* align-self: flex-end; */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS FlexBox</h1>
+    <div class="container">
+        <div class="item" id="item-1">First Box</div>
+        <!-- <div class="item" id="item-2">Second Box</div>
+        <div class="item" id="item-3">Third Box</div> -->
+        <!-- <div class="item" id="item-4">Fourth Box</div>
+        <div class="item" id="item-5">Fifth Box</div>
+        <div class="item" id="item-6">Sixth Box</div> -->
+    </div>
+</body>
+</html>
