@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-image: url('img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    /* border: 2px solid black; */
+    overflow: auto;
+    width: 100%;
+    height: 89px;
+}
+
+div{
+    display: inline-block;
+}
+
+div.logo{
+    top: 4px;
+    /* border: 2px solid red; */
+    position: absolute;
+    left: 50px;
+}
+
+div.logo img{
+    text-align: center;
+    width: 150px;
+    height: 50px;
+}
+
+div.logot{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1000;
+}
+
+div.nav{
+    top: 18px;
+    position: absolute;
+    left: 35%;
+    /* border: 2px solid blueviolet; */
+}
+
+div.nav li{
+    padding: 0px 15px;
+    display: inline-block;
+}
+
+a.nav-link{
+    color: #ffffffb9;
+    font-size: 20px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+a.nav-link:hover{
+    color: rgba(255, 0, 0, 0.63);
+    transition-duration: .3s;
+}
+
+a.nav-link:active{
+    color: red;
+}
+
+a.active{
+    color: rgba(255, 0, 0, 0.856);
+}
+
+div.btn{
+    top: 18px;
+    position: absolute;
+    right: 50px;
+    /* border: 2px solid rgb(223, 60, 87); */
+}
+
+.button{
+    width: 85px;
+    height: 31px;
+    margin: 0px 5px;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid black;
+    /* background-color: #040507b0; */
+    background-color: #00000091;
+    color:  rgba(255, 0, 0, 0.856);
+    transition-duration: .5s;
+}
+
+.button:hover{
+    background-color: #040507;
+}
+
+.button:active{
+    border-color: black;
+    border: 1px solid black;
+}
+
+main.container{
+    /* border: 2px solid red; */
+    width: 1000px;
+    margin: 13px auto;
+    overflow: auto;
+    padding: 20px;
+}
+section.container-group{
+    padding: 10px 0px 10px 0px;
+    border: 1px solid rgb(255 255 255 / 18%);
+    border-radius: 15px;
+    background-color: rgb(100 148 237 / 9%);
+    float: right;
+    width: 550px;
+    height: 332px;
+    
+}
+
+div.f-group{
+    display: block;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+div.f-group h1{
+    font-weight: 1000;
+    font-size: 50px;
+    letter-spacing: 13px;
+    word-spacing: 2px;
+    color: rgba(255, 0, 0, 0.856);
+}
+
+.form-group{
+    text-align: center;
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+}
+
+input{
+    font-size: 15px;
+    width: 300px;
+    height: 32px;
+    border: 1px solid black;
+    border-radius: 2px;
+
+}
+
+
+
+button.submit{
+    display: block;
+    margin: 10px auto;
+    width: 270px;
+}
