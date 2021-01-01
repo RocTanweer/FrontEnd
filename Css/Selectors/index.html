@@ -7,39 +7,52 @@
     <title>Selector</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <style>
+        /* This is like next sibling */
         h1+p {
             color: cornflowerblue;
         }
 
-        p>ul {
-            
-            color: blue;
-            background-color: white;
+        /* div > ol{
+            background-color: pink;
         }
+        div > ul{
+            background-color: pink;
+        } */
 
-        p ul{
-            color: blue;
-            background-color: white;
+        /* div > li {
+            background-color: yellow;
+        } */
+
+        /* div > ul{
+            background-color: blue;
+            color: white;
+        } */
+        /* This only applies in case of a semantic tag including div */
+        /* This is like next child */
+        div > ul{
+            color: red;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <h1>This is css Selectors</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, nemo placeat saepe excepturi libero incidunt
-            facere ad sed officia modi.</p>
-        <p id="redpara" class="redElement">
-            <ul>
-                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, voluptates!</li>
-                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, pariatur.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt corrupti, doloremque necessitatibus
-                quibusdam perferendis impedit fugiat quaerat amet id hic!</li>
-            </ul>
+        <p>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, cumque ea ratione cupiditate asperiores
+                pariatur porro iusto voluptatibus voluptas. Dolor maxime laboriosam voluptas quis libero? Libero natus
+                sunt vero delectus fuga quia sed eum accusantium dolores nesciunt nemo ab assumenda odio minima atque
+                magnam similique quaerat architecto nam porro totam, distinctio cum exercitationem! Porro, harum.
+                Facilis nobis placeat nemo consectetur molestias delectus fuga neque aliquam eos expedita, sit
+                accusamus. Tempora quidem veritatis, magni iusto rerum soluta quas, ipsum aliquam deserunt amet
+                consectetur dolorum adipisci perspiciatis delectus! Tempora, officiis officia eveniet neque perferendis
+                minus quam culpa iste beatae fugit mollitia? Eveniet.</li>
         </p>
 
+
         <div>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam voluptatum quo harum sint qui, rerum
+                nam architecto officia nisi, ex hic tenetur illo impedit omnis ipsa, sed sequi? Ad, omnis?</li>
             <p classs="bgblue">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque suscipit nam cumque facilis in?
                 Laborum,
@@ -52,6 +65,43 @@
             </ol>
             </p>
         </div>
+        <ul>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, voluptates!</li>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, pariatur.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt corrupti, doloremque necessitatibus
+                quibusdam perferendis impedit fugiat quaerat amet id hic!</li>
+        </ul>
+    </div> -->
+    <div class="container">
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        This should be affected!
+                    </p>
+                </li>
+            </ul>
+
+        </p>
+        <header>
+            <ul>
+                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, magnam?</li>
+            </ul>
+            <main>
+                <ul><li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, laborum?</li></ul>
+            </main>
+        </header>
+        <aside>
+            <ul>
+                <li>This must not be affected</li>
+            </ul>
+            <main>
+                <ul><li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, laborum?</li></ul>
+            </main>
+        </aside>
+
+        
     </div>
 </body>
 
