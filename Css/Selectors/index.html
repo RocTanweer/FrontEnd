@@ -5,7 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selector</title>
-    <link rel="stylesheet" href="s1.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        h1+p {
+            color: cornflowerblue;
+        }
+
+        p>ul {
+            
+            color: blue;
+            background-color: white;
+        }
+
+        p ul{
+            color: blue;
+            background-color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,12 +29,27 @@
         <h1>This is css Selectors</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, nemo placeat saepe excepturi libero incidunt
             facere ad sed officia modi.</p>
-        <p id="redpara" class="redElement"></p>
-        
+        <p id="redpara" class="redElement">
+            <ul>
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, voluptates!</li>
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, pariatur.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt corrupti, doloremque necessitatibus
+                quibusdam perferendis impedit fugiat quaerat amet id hic!</li>
+            </ul>
+        </p>
+
         <div>
             <p classs="bgblue">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque suscipit nam cumque facilis in? Laborum,
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque suscipit nam cumque facilis in?
+                Laborum,
                 sed laboriosam culpa odio pariatur aliquam quae, molestias assumenda sit ex vero, laudantium esse odit.
+            <ol>
+                <li id="list-1">List 1</li>
+                <li id="list-2">List 2</li>
+                <li id="list-3">List 3</li>
+                <li id="list-4">List 4</li>
+            </ol>
             </p>
         </div>
     </div>
