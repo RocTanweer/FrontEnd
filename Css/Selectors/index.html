@@ -7,36 +7,49 @@
     <title>Selector</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <style>
-        /* This is like next sibling */
-        h1+p {
-            color: cornflowerblue;
+        /* By name of tags */
+        html {
+            /* background-color: blue; */
+            border: 3px solid pink;
+            margin: 50px;
         }
 
-        /* div > ol{
+        body {
+            margin: 50px;
+            /* background-color: red; */
+            border: 3px solid rgb(0, 0, 0);
+        }
+
+        /* By class name after a . */
+        .container {
+            /* background-color: yellow; */
+            border: 3px solid rgb(0, 225, 255);
+        }
+
+        /* by an id name after # */
+        #list-1 {
+            color: orange;
+        }
+
+        div+ul {
+
             background-color: pink;
         }
-        div > ul{
-            background-color: pink;
-        } */
 
-        /* div > li {
-            background-color: yellow;
-        } */
+        div>p {
+            color: rgb(9, 255, 0);
+        }
 
-        /* div > ul{
-            background-color: blue;
-            color: white;
-        } */
-        /* This only applies in case of a semantic tag including div */
-        /* This is like next child */
-        div > ul{
-            color: red;
+        ul:nth-child(0,1,1){
+            color :rgba(105, 255, 125, 0.808)
         }
     </style>
 </head>
 
 <body>
-    <!-- <div class="container">
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eos quibusdam officiis fuga, ducimus
+            possimus in laborum adipisci dicta itaque vel voluptate omnis soluta?</p>
         <h1>This is css Selectors</h1>
         <p>
             <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, cumque ea ratione cupiditate asperiores
@@ -51,8 +64,8 @@
 
 
         <div>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam voluptatum quo harum sint qui, rerum
-                nam architecto officia nisi, ex hic tenetur illo impedit omnis ipsa, sed sequi? Ad, omnis?</li>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam voluptatum quo harum sint qui, rerum
+                nam architecto officia nisi, ex hic tenetur illo impedit omnis ipsa, sed sequi? Ad, omnis?</p>
             <p classs="bgblue">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque suscipit nam cumque facilis in?
                 Laborum,
@@ -72,16 +85,18 @@
             <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt corrupti, doloremque necessitatibus
                 quibusdam perferendis impedit fugiat quaerat amet id hic!</li>
         </ul>
-    </div> -->
+    </div>
+
+
     <div class="container">
         <p>
-            <ul>
-                <li>
-                    <p>
-                        This should be affected!
-                    </p>
-                </li>
-            </ul>
+        <ul>
+            <li>
+                <p>
+                    This should be affected!
+                </p>
+            </li>
+        </ul>
 
         </p>
         <header>
@@ -89,7 +104,9 @@
                 <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, magnam?</li>
             </ul>
             <main>
-                <ul><li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, laborum?</li></ul>
+                <ul>
+                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, laborum?</li>
+                </ul>
             </main>
         </header>
         <aside>
@@ -97,11 +114,27 @@
                 <li>This must not be affected</li>
             </ul>
             <main>
-                <ul><li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, laborum?</li></ul>
+                <ul>
+                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, laborum?</li>
+                </ul>
             </main>
         </aside>
 
-        
+    </div>
+
+    <div class="nth">
+        <ul>
+            <li class="item-1">item 1</li>
+            <li class="item-2">item 2</li>
+            <li class="item-3">item 3</li>
+            <li class="item-4">item 4</li>
+            <li class="item-5">item 5</li>
+            <li class="item-6">item 6</li>
+            <li class="item-7">item 7</li>
+            <li class="item-8">item 8</li>
+            <li class="item-9">item 9</li>
+            <li class="item-10">item 10</li>
+        </ul>
     </div>
 </body>
 
