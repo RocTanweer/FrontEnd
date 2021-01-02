@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coder World</title>
+    <style>
+        body{
+            font-family: 'Bree Serif', serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            /*opacity: .5;*/    /* This is why we use this technique*/
+        }
+        body::before{
+            content:"";
+            background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+            position:fixed;
+            width:100%;
+            height:100%;
+            z-index:-1;
+            top:0;
+            left:0;
+            right:0;
+            bottom: 0;
+            opacity: .3;
+        }
+        .nav-bar{
+            display:flex;
+            flex-flow:row wrap;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .nav-item{
+            list-style:none;
+            display: flex;
+        }
+
+        .nav-el{
+            margin: 2px 35px;
+            font-size: 20px;
+        }
+
+        section{
+            display: flex;
+            flex-flow: column wrap;
+            align-items:center;
+            width:1200px;
+            height:300px;
+            justify-content: center;
+            margin: 23px 230px;
+        }
+
+        h1, p{
+            text-align: center;
+        }
+
+        h1{
+            font-size: 3rem;
+        }
+
+        p{
+            font-size: 25px;
+            line-height: 40px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <ul class="nav-item">
+                <li class="nav-el">Home</li>
+                <li class="nav-el">About</li>
+                <li class="nav-el">Contact</li>
+                <li class="nav-el">Register</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>
+            Welcome to Coder World
+        </h1>
+
+        <p>
+            Ldorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit at neque similique sit reiciendis modi
+            nulla alias! o!
+        </p>
+    </section>
+</body>
+
+</html>
