@@ -1,0 +1,142 @@
+ .container {
+            display: flex;
+            background-color: greenyellow;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            animation-name: Roc;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+            position: relative;
+            animation-timing-function: ease-in-out;
+        }
+
+        .fill {
+            background-color: rgb(5, 5, 5);
+            animation-name: Roc2;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+            position: relative;
+        }
+
+        @keyframes Roc2 {
+            0% {
+                width: 0px;
+                height: 0px;
+            }
+
+            5% {
+                width: 5px;
+                height: 5px;
+            }
+
+            10% {
+                width: 10px;
+                height: 10px;
+            }
+
+            15% {
+                width: 15px;
+                height: 15px;
+            }
+
+            20% {
+                width: 20px;
+                height: 20px;
+            }
+
+            25% {
+                width: 25px;
+                height: 25px;
+            }
+
+            30% {
+                width: 30px;
+                height: 30px;
+            }
+
+            35% {
+                width: 35px;
+                height: 35px;
+            }
+
+            40% {
+                width: 40px;
+                height: 40px;
+            }
+
+            45% {
+                width: 45px;
+                height: 45px;
+            }
+
+            50% {
+                width: 50px;
+                height: 50px;
+            }
+
+            55% {
+                width: 55px;
+                height: 55px;
+            }
+
+            60% {
+                width: 60px;
+                height: 60px;
+            }
+
+            65% {
+                width: 65px;
+                height: 65px;
+            }
+
+            70% {
+                width: 70px;
+                height: 70px;
+            }
+
+            75% {
+                width: 75px;
+                height: 75px;
+            }
+
+            80% {
+                width: 80px;
+                height: 80px;
+            }
+
+            85% {
+                width: 85px;
+                height: 85px;
+            }
+
+            90% {
+                width: 90px;
+                height: 95px;
+            }
+
+            95% {
+                width: 95px;
+                height: 95px;
+            }
+
+            100% {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @keyframes Roc {
+            from {
+                top: 0;
+                left: 0;
+            }
+
+            to {
+                top: 0;
+                left: 500px;
+            }
+        }
