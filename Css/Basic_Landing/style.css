@@ -21,8 +21,8 @@ header{
     /* background-color: rgba(137, 43, 226, 0.226); */
     /* color: white; */
     /* border: 3px solid black; */
-    /* position: fixed;
-    top: 0; */
+     position: fixed;
+    top: 0; 
     background-color: rgb(12 12 12 / 15%);
     margin: auto;
 }
