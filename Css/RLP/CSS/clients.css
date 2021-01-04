@@ -1,0 +1,34 @@
+
+#Clients{
+    margin-top: 20px;
+}
+
+#Clients::before{
+    content: "";
+    background: url("../Images/bg.jpg") no-repeat center center/cover;
+    position: absolute;
+    z-index: -1;
+    height: 300px;
+    width: 100%;
+    opacity: .5;
+}
+
+#Clients h1{
+    text-align:center;
+    padding-top: 20px;
+}
+
+
+.client-group{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.client-item{
+    padding: 2px 30px;
+}
+
+.client-item img{
+    height: 124px;
+}
