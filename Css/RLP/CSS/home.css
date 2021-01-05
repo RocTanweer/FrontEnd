@@ -25,13 +25,32 @@
     margin: 10px auto;
     letter-spacing: 3px;
     word-spacing: 10px;
+    text-align: center;
 }
 
 #home p{
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 40px;
+    text-align: center;
 }
+
+.btn-home{
+    margin: 30px 2px;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.btn-home:hover{
+    background-color: rgba(165, 42, 42, 0.924);
+}
+
+.btn-home:focus{
+    background-color: rgb(165, 42, 42);
+}
+
+
+
 
 
 
