@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            height: 100vh;
+            background-color: tomato;
+            /* First initializing the container as a grid box */
+            display: grid;
+            /* Then Specifying the rows and columns in many following ways */
+            /* By manually specifying size of each column / row */
+            grid-template-columns: 100px 200px 300px;
+            grid-template-rows: 100px 200px 300px;
+            /* Since the rows or columns of this grid is smaller than the size of the container */
+            /* We can make thses type of grid center of the screen */
+            justify-content: center;
+            /* We can also set the rows and columns as fraction of the screen */
+            /* Using this method,unlike the previous one it will cover the whole screen as its fraction and
+            justify-content wont work */
+            grid-template-columns: 1fr 3fr 4fr;
+            grid-template-rows: 1fr 3fr 4fr;
+
+            /* In case we wish to make large number of rows or columns of same width we can use this method */
+            grid-template-columns: repeat(5, 2fr);
+            grid-template-rows: repeat(5, 2fr);
+
+            /* If we want to limit the size of rows or columns and also set their minimum size */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+
+            /* We can also span a grid child to different size */
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            height: auto;
+            grid-gap: 1rem;
+
+            grid-template-areas: 
+            ' . . . . '
+            ' fc fc fc fc '
+            ' fc fc fc fc '
+            ;
+        }
+
+        .box {
+            background-color: cornflowerblue;
+            color: black;
+            border: 2px solid black;
+            padding: 14px 34px;
+        }
+        /* Targeting the first child of this container */
+        .box:first-child{
+            /* This uses the lines of grid as number line in math */
+            /* Starting point of rows and columns*/
+            grid-row-start: 1;
+            grid-column-start: 1;
+            /* ending point of rows and columns*/
+            grid-row-end: 3;
+            grid-column-end: 3;
+            /* Short hand for this */
+            grid-row: 1 / 3;
+            grid-column: 1 / 3;
+            /* we can also use minus number as well as minus is also on number line in maths */
+
+            /* We can also decide how much a child take space in the grid by taking space of each grid box as a init */
+            grid-column: 2 / span 3;
+            /* We said start from line number 2 in column direction and take space of 3 grid boxes */
+            grid-row: 1 / span 3;
+            /* same as above */
+
+            /* Now, This is the short-hand for spanning a grid box using number line */
+            /* grid-area : starting row line num / starting column line num / ending row line num /  ending column line num */
+            /* We will fo same spannig as above */
+            grid-area: 2 / 1 / 6 / 3;
+            /* We can also span by grid box unit method as above */
+            /* We will */
+            grid-area: 3 / 1 / span 2 / span 3;
+            /* Now we will give name to to any selected child in grid-area and by using grid-template-areas in grid-box
+            we can span any child however we like all at once */
+
+            /* Now we will give This child for instance a name and for other we can use '.' for no name */
+            grid-area: fc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Item - 1</div>
+        <div class="box">Item - 2</div>
+        <div class="box">Item - 3</div>
+        <div class="box">Item - 4</div>
+        <div class="box">Item - 5</div>
+        <div class="box">Item - 6</div>
+        <div class="box">Item - 7</div>
+        <div class="box">Item - 8</div>
+        <div class="box">Item - 9</div>
+        <div class="box">Item - 10</div>
+        <div class="box">Item - 11</div>
+        <div class="box">Item - 12</div>
+    </div>
+</body>
+
+</html>
