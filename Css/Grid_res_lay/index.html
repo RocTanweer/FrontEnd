@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive grid</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            color: rgb(255, 255, 255);
+            grid-gap: 1rem;
+            display: grid;
+            grid-template-areas:
+                ' h h h h'
+                ' a1 m m a2 '
+                ' f f f f ';
+        }
+
+        .item {
+            text-align: center;
+            background-color: blue;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 12px 23px;
+        }
+
+        #h {
+            grid-area: h;
+        }
+
+        #a1 {
+            grid-area: a1;
+        }
+
+        #m {
+            grid-area: m;
+        }
+
+        #a2 {
+            grid-area: a2;
+        }
+
+        #f {
+            grid-area: f;
+        }
+
+        @media screen and (max-width: 500px){
+            body {
+            background-color: rgba(115, 255, 0, 0.746);
+            color: rgba(236, 9, 9, 0.856);
+            grid-gap: 1rem;
+            display: grid;
+            grid-template-areas:
+                ' h h h h'
+                ' a1 a1 a1 a1 '
+                ' m m m m  '
+                ' a2 a2 a2 a2 '
+                ' f f f f ';
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="item" id="h">
+        <h1>Header</h1>
+        <p>Home About Contact Regiter</p>
+    </header>
+
+    <aside class="item" id="a1">
+        <h1>Aside 1</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptates laboriosam fugiat molestiae,
+            eaque, excepturi nobis et ex consequuntur nisi odit debitis dicta exercitationem soluta modi dolorem. Ut
+            dolor praesentium, maxime minima distinctio officia placeat, excepturi harum consequatur est autem.
+        </p>
+    </aside>
+
+    <main class="item" id="m">
+        <h1>Main content</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laudantium ratione pariatur non doloribus sint
+            voluptatibus ipsa veritatis accusamus. Atque maxime possimus enim quam! Quas ad nemo minima ab nam
+            consequatur debitis unde quae, voluptatibus esse soluta porro, accusantium sunt dignissimos temporibus atque
+            veniam. Aut reiciendis quae veritatis voluptatum ipsum illo iusto quidem, minus incidunt maxime corrupti
+            sapiente ut obcaecati quas perferendis optio possimus velit quo, suscipit hic non animi debitis eveniet
+            distinctio! Eius architecto voluptatibus incidunt. Consequuntur quaerat minima magnam, optio quo nemo libero
+            quam similique molestiae quas vitae, sit sed consectetur nobis aliquid recusandae. Sit dolorum vel molestiae
+            accusantium. Repellendus libero alias, magni consectetur totam quasi officiis distinctio quibusdam beatae
+            eius tempore dolorem in neque eum aliquam eligendi quo aspernatur quod natus at. Praesentium inventore velit
+            fugit delectus doloremque minima iste culpa, incidunt deserunt quos labore possimus soluta harum nostrum?
+            Nisi id nobis deleniti, quibusdam molestiae voluptatibus aliquam officia beatae eum aspernatur vitae
+            recusandae fuga assumenda magnam asperiores suscipit officiis repellendus, cumque ducimus sit quidem
+            molestias consequuntur mollitia? Tempore cum, omnis unde similique autem numquam et rem nam molestiae
+            reiciendis voluptatem ullam ducimus? Qui incidunt hic dolor neque magni explicabo eligendi atque perferendis
+            numquam facere maxime id, esse magnam nihil architecto laboriosam corporis ab rerum velit cumque. Quas
+            commodi voluptates itaque, aliquid vel mollitia tempora unde dignissimos deserunt. Facere, ipsum ipsa
+            accusantium quo corrupti adipisci eum quidem tempore optio non, iste nulla dolorem rem. Facilis fugiat quam
+            esse explicabo, sequi laborum, consequuntur enim laudantium cumque nam beatae aliquam numquam amet? Qui nemo
+            eaque esse ducimus perspiciatis. Voluptatibus consequuntur ullam illo maiores voluptatem consectetur placeat
+            ut possimus, eius laudantium animi, nostrum, vero id? Minima voluptatibus quo facere doloremque temporibus
+            iste rem adipisci provident facilis enim impedit minus ab omnis labore quisquam, velit ipsum voluptates
+            deleniti sapiente laborum praesentium? Pariatur expedita reprehenderit ducimus labore odio porro ipsam
+            aspernatur voluptatem alias a nisi, quae, magnam inventore deleniti excepturi, eos ipsa doloremque
+            perspiciatis libero ea et quaerat. Assumenda, possimus rem! Ipsa deleniti, quos, facilis veniam aspernatur a
+            tempora laboriosam hic sit labore commodi, repellendus porro consequuntur ratione odit non est autem fuga
+            suscipit voluptate repellat at quasi. Alias ex molestias iste voluptates autem repellat earum magnam unde
+            veniam perspiciatis quas libero quod praesentium ducimus voluptas modi numquam ipsam magni in aliquam
+            officia, rerum eaque repudiandae! Cum nemo in necessitatibus excepturi ut doloribus repellendus maiores
+            beatae eos perspiciatis, impedit facilis placeat repudiandae distinctio!</p>
+    </main>
+
+    <aside class="item" id="a2">
+        <h1>Aside 2</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum dicta culpa nemo excepturi suscipit sapiente
+            quos laudantium doloremque similique cupiditate, aut perferendis debitis commodi eius quidem earum
+            voluptates veniam qui alias maxime! Porro incidunt molestiae quo et ab corporis amet.
+        </p>
+    </aside>
+
+    <footer class="item" id="f">
+        <h1>Footer</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, incidunt.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <style>
+        body {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside';
+        }
+
+        .item {
+            border: 3px solid black;
+            background-color: cornflowerblue;
+            padding: 12px 23px;
+        }
+
+        #navbar {
+            grid-area: navbar;
+        }
+
+        #seciton {
+            grid-area: section;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item" id="navbar">
+        home about contactus
+    </div>
+
+    <div class="item" id="section">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere totam placeat sapiente ipsa explicabo numquam
+        vel cumque aspernatur, consectetur mollitia quia odio, reiciendis magni fugit qui facilis adipisci nobis
+        asperiores dolores odit. Accusamus dicta perferendis pariatur asperiores ut ea, dolores magni voluptatibus vel
+        debitis corporis. Quam doloremque, sit officia fugiat autem provident, dolor in laudantium, iste corporis modi
+        dignissimos voluptatem assumenda consectetur adipisci qui fugit reprehenderit mollitia ducimus totam. Vel
+        inventore accusamus veniam pariatur hic nihil culpa. Nesciunt et numquam in suscipit dolor nemo illum deserunt
+        maiores esse ipsa. Fugit provident sit aliquid ratione modi. Cupiditate dolore veniam fugit distinctio,
+        voluptatibus inventore odit corporis deserunt impedit fuga ea cum perspiciatis nulla molestiae sit provident
+        esse, ex eveniet aspernatur aliquam? Dolorum aliquid magnam molestias repudiandae officia rem inventore,
+        laboriosam quaerat doloremque corporis quae nam, aspernatur provident debitis animi fuga. Consequuntur quisquam
+        neque officiis sit dolore iste tempora animi accusamus qui, sapiente sed fugiat quas ea ratione aliquid maiores
+        debitis eum officia maxime voluptas quidem laboriosam, hic suscipit a. Cum, illum dolor ad totam ut sunt
+        debitis, quaerat rerum aperiam odit eveniet ducimus fugiat iste. Maiores, ipsam. Quia sint reiciendis ratione
+        voluptatibus, odit perspiciatis dignissimos minus laudantium iure, esse minima soluta sapiente ullam eligendi
+        fuga. Qui dolor ipsa quos. Rerum vitae non quisquam voluptatum quidem ullam, numquam dicta placeat quas odio
+        asperiores soluta! Tempore, deleniti. Ipsam nihil non repellendus nam, quibusdam inventore unde impedit quia
+        autem facilis, vero quidem? Necessitatibus ab aliquam dolor, sequi culpa nisi hic cum! Quod amet vel nostrum
+        numquam porro minima corporis quisquam facilis corrupti non voluptatem ratione est dolorem ex distinctio dolores
+        ut asperiores, tempore blanditiis qui. Velit quis facilis alias veniam odit veritatis doloribus ad eum, non iure
+        unde minima fugit, delectus fuga dolorem cum illum, recusandae porro dolore deserunt eveniet quidem quod! Beatae
+        aperiam exercitationem porro distinctio, suscipit illo ducimus incidunt voluptatem laudantium explicabo sed
+        commodi voluptate. Ducimus nesciunt itaque, nobis voluptatum temporibus, consequuntur consequatur maiores,
+        quisquam nostrum cupiditate beatae atque odio saepe id sunt quasi assumenda distinctio dolore officia. Ratione,
+        modi qui quidem, omnis veritatis eligendi eius nobis velit, delectus incidunt architecto dolor. Cum aliquam,
+        recusandae ea magnam, possimus, eveniet magni est nihil laudantium iure ut explicabo saepe voluptates! Odit,
+        asperiores totam numquam pariatur ratione sint eius illo enim omnis distinctio quisquam cum. Asperiores nihil
+        quam placeat fuga soluta, unde minima sunt tempora deleniti? Culpa, aperiam doloribus maxime iusto nisi cumque.
+        Laudantium, alias voluptas!
+    </div>
+
+    <div class="item" id="aside">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates labore natus dolorem nam, quae ipsam tempore
+        consectetur ad id beatae dicta numquam explicabo ex vel sed officiis saepe impedit optio?
+    </div>
+</body>
+
+</html>
