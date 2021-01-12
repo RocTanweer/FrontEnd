@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Output</title>
+</head>
+<body>
+    <div class="container">
+        <!-- here we used inline js -->
+        <!-- we can change the content of an element in html -->
+        <p id="para"></p>
+        <button type="button" onclick="document.getElementById('para').innerHTML = 'This is js output'">Click me</button>
+
+        <!-- we can also make an output by making an alert -->
+
+        <button type="button" onclick="window.alert('hello Tanweer')">Hello</button>
+
+        <!-- not like this!   -->
+        <!-- It will delete the whole DOM -->
+        <button type="button" onclick="document.write('Hello')">Never click me!</button>
+    </div>
+
+
+    <script>
+        //  We can also write in the DOM to debug
+        // It has be executed just like this!
+        document.write('hello world')   
+    </script>
+</body>
+</html>
