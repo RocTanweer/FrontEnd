@@ -6,3 +6,59 @@ $b3 : hsl(219, 29%, 14%);
 $b4 : hsl(0, 0%, 100%);
 $bc : hsl(210, 46%, 95%);
 $tc : hsl(0, 0%, 81%);
+
+
+@mixin cmnprt1($a) {
+    .box-title{
+        grid-row: 1 / 2;
+        grid-column-start: 1;
+        grid-column-end: $a;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: auto repeat(2, 1fr);
+        justify-content: space-evenly;
+        align-items: center;
+        img{
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+
+        .pc{
+            grid-area: 1 / 2 / 2 / 4;
+            justify-self: center;
+            justify-self: flex-start;
+
+            #name{
+            font-size: .8rem;
+            margin: 0;
+            padding : 0;
+            }
+
+            p{
+                padding-top: 0;
+                margin-top: 0;
+            }
+
+            #vg{
+                font-size: .7rem;
+                opacity: .5;
+                margin: 0;
+                padding : 0;
+            }
+        }
+    }
+
+    h3{
+        grid-area: 2 / 1 / 3 / 3;
+        margin: 0;
+    }
+
+    p{
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    @content;
+}
