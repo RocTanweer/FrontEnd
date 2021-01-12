@@ -1,0 +1,300 @@
+@import 'variable';
+@import 'global';
+
+.box{
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 1fr 1fr;
+    padding: 0 30px 30px 30px;
+    overflow: hidden;
+}
+
+#box-1{
+    color: $tc;
+    background-color: $b1;
+    grid-area: 1/ 1 / 2 / 3;
+
+    .box-title{
+        grid-area: 1 / 1 / 2 / 2;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: auto repeat(2, 1fr);
+        justify-content: space-evenly;
+        align-items: center;
+        img{
+            border-radius: 50%;
+            border: 2px solid #a775f1;
+            height: 30px;
+            width: 30px;
+            grid-area: 1 / 1 / 2 / 2 ;
+        }
+
+
+        .pc{
+            grid-area: 1 / 2 / 2 / 4;
+            justify-self: center;
+            justify-self: flex-start;
+
+            #name{
+            font-size: .8rem;
+            margin: 0;
+            padding : 0;
+            }
+
+            p{
+                padding-top: 0;
+                margin-top: 0;
+            }
+
+            #vg{
+                font-size: .7rem;
+                opacity: .5;
+                margin: 0;
+                padding : 0;
+            }
+        }
+    }
+
+    #qt{
+        grid-area: 1 / 2 / 2 / 3;
+        justify-self: center;
+        width: 90px;
+        height: 95px;
+    }
+
+    h3{
+        grid-area: 2 / 1 / 3 / 3;
+        margin: 0;
+    }
+
+    p{
+        grid-area: 3 / 1 / 4 / 3;
+    }    
+}
+
+
+
+#box-2{
+    color: $tc;
+    grid-area: 1/ 3 / 2 / 4;
+    background-color: $b2;
+
+    .box-title{
+        grid-area: 1 / 1 / 2 / 3;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: auto repeat(2, 1fr);
+        justify-content: space-evenly;
+        align-items: center;
+        img{
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            grid-area: 1 / 1 / 2 / 2 ;
+        }
+
+
+        .pc{
+            grid-area: 1 / 2 / 2 / 4;
+            justify-self: center;
+            justify-self: flex-start;
+
+            #name{
+            font-size: .8rem;
+            margin: 0;
+            padding : 0;
+            }
+
+            p{
+                padding-top: 0;
+                margin-top: 0;
+            }
+
+            #vg{
+                font-size: .7rem;
+                opacity: .5;
+                margin: 0;
+                padding : 0;
+            }
+        }
+    }
+
+    h3{
+        grid-area: 2 / 1 / 3 / 3;
+        margin: 0;
+    }
+
+    p{
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+}
+
+#box-3{
+    color:  #48556aeb;
+    grid-area: 2/ 1 / 3 / 2;
+    background-color: $b4;
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.082);
+
+
+    .box-title{
+        grid-area: 1 / 1 / 2 / 3;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: auto repeat(2, 1fr);
+        justify-content: space-evenly;
+        align-items: center;
+        img{
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            grid-area: 1 / 1 / 2 / 2 ;
+        }
+
+
+        .pc{
+            grid-area: 1 / 2 / 2 / 4;
+            justify-self: center;
+            justify-self: flex-start;
+
+            #name{
+            font-size: .8rem;
+            margin: 0;
+            padding : 0;
+            }
+
+            p{
+                padding-top: 0;
+                margin-top: 0;
+            }
+
+            #vg{
+                font-size: .7rem;
+                opacity: .5;
+                margin: 0;
+                padding : 0;
+            }
+        }
+    }
+
+    h3{
+        grid-area: 2 / 1 / 3 / 3;
+        margin: 0;
+    }
+
+    p{
+        grid-area: 3 / 1 / 4 / 3;
+    }
+}
+#box-4{
+    color: $tc;
+    background-color: $b3;
+    grid-area: 2/ 2 / 3 / 4;
+
+    .box-title{
+        grid-area: 1 / 1 / 2 / 3;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: auto repeat(2, 1fr);
+        justify-content: space-evenly;
+        align-items: center;
+        img{
+            border-radius: 50%;
+            border: 2px solid #a775f1;
+            height: 30px;
+            width: 30px;
+            grid-area: 1 / 1 / 2 / 2 ;
+        }
+
+
+        .pc{
+            grid-area: 1 / 2 / 2 / 4;
+            justify-self: center;
+            justify-self: flex-start;
+
+            #name{
+            font-size: .8rem;
+            margin: 0;
+            padding : 0;
+            }
+
+            p{
+                padding-top: 0;
+                margin-top: 0;
+            }
+
+            #vg{
+                font-size: .7rem;
+                opacity: .5;
+                margin: 0;
+                padding : 0;
+            }
+        }
+    }
+
+    h3{
+        grid-area: 2 / 1 / 3 / 3;
+        margin: 0;
+    }
+
+    p{
+        grid-area: 3 / 1 / 4 / 3;
+    }
+}
+
+#box-5{
+    color:  #48556aeb;
+    background-color: $b4;
+    grid-area: 1/ 4 / 3 / 5;
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.082);
+
+    .box-title{
+        grid-area: 1 / 1 / 2 / 3;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: auto repeat(2, 1fr);
+        justify-content: space-evenly;
+        align-items: center;
+        img{
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            grid-area: 1 / 1 / 2 / 2 ;
+        }
+
+
+        .pc{
+            grid-area: 1 / 2 / 2 / 4;
+            justify-self: center;
+            justify-self: flex-start;
+
+            #name{
+            font-size: .8rem;
+            margin: 0;
+            padding : 0;
+            }
+
+            p{
+                padding-top: 0;
+                margin-top: 0;
+            }
+
+            #vg{
+                font-size: .7rem;
+                opacity: .5;
+                margin: 0;
+                padding : 0;
+            }
+        }
+    }
+
+    h3{
+        grid-area: 2 / 1 / 3 / 3;
+        margin: 0;
+    }
+
+    p{
+        grid-area: 3 / 1 / 4 / 3;
+    }
+}

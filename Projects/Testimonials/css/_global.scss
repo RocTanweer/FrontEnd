@@ -1,0 +1,26 @@
+html{
+    font-size: 100%;
+
+}
+
+body{
+    background-color: $bc;
+    padding-top: 80px;
+    display: grid;
+    grid-gap: 1.4rem;
+    grid-template-columns: repeat(4 , 247px);
+    grid-template-rows: repeat(2 , 254px);
+    justify-content: center;
+    align-content: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+p#dscption{
+    font-size: .73rem;
+    line-height: 17px;
+    opacity: .7;
+}
+
+h3{
+    font-size: 1.2rem;
+}
