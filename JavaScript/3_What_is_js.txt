@@ -1,0 +1,4 @@
+JavaScript is one of the programming languages which is use to make the website dynamic
+It is an interpreted language
+It is prototype-based object oriented
+And ECMA script is a document that contains detail on how JavaScript works
