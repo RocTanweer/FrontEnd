@@ -11,6 +11,9 @@
 for(declaration of a variable ; certain condition ; certain action on that condition){
     statements with or without control flow;
 }
+
+In for loop, we first set counter to how many times we want the statement to be executed 
+and then we arite the statmentes that we want to execute
 */
 
 /*
@@ -18,6 +21,9 @@ declaration of a variable
 while(certain condition){
     statements to be executed on those condition
 }
+
+in while loop, we just write a condition on the variable declared before the loop
+and then we write the statements to be executed
 */
 
 /*
