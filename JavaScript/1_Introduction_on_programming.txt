@@ -1,7 +1,0 @@
-1. Programming is hard and this should never be overlooked!
-2. It is a way to command the machine 
-3. Commands often consists of collection of statements
-4. It is an art of having control over complexity
-5. Those complexity are managed by some techniques like modulating
-6. Programming is like having an adventure across infinite domain
-7. So those who stops exploring and stagnate will be in loss
