@@ -18,3 +18,9 @@ function countChar(str, char){
     }
     return `The number of '${char}' in '${str}' is/are ${count}`
 }
+
+
+
+
+
+
