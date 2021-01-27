@@ -15,6 +15,10 @@ body{
     overflow: hidden;
     max-width: 100%;
     max-height: 100vh;
+
+    @media (max-width: 40rem){
+        position: relative;
+    }
 }
 
 #top-circle{
@@ -22,16 +26,34 @@ body{
     top: -500px;
     left: -210px;
     transform: rotate(45deg);
+
+    @media (max-width: 40rem){
+        top: -632px;
+        left: -704px;
+    }
 }
 
 section{
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     height:24rem;
     width: 21.5rem;
     position: absolute;
     top: 10rem;
     left: 40rem;
     border-radius: 1.2rem;
+
+    @media (max-width:40rem){
+        background-color: white;
+        height: 27rem;
+        width: 24.5rem;
+        position: absolute;
+        top: 10rem;
+        left: 1rem;
+        border-radius: 1.2rem;
+}
+
+
+    
     
 
     .img{
@@ -40,7 +62,10 @@ section{
         height: 38%;
         border-top-left-radius: 1.2rem;
         border-top-right-radius: 1.2rem;
-        background-color: brown;
+
+        @media (max-width:40rem){
+            width: 24.5rem;
+        }
         
 
         #card{
@@ -60,8 +85,7 @@ section{
             border-radius: 50%;
             display: inline-block;
             position: absolute;
-            background: url('/Images/image-victor.jpg') no-repeat;
-
+            background: url('../Images/image-victor.jpg');
         }
     }
 
@@ -122,8 +146,8 @@ section{
             margin-top: 5px;
             font-size: .6rem;
             font-family: $pf;
-            // display: block;
-            // text-align: center;
+            display: block;
+            text-align: center;
             letter-spacing: 2px;
         }
 
@@ -138,4 +162,10 @@ section{
     bottom: -580px;
     right: -170px;
     transform: rotate(45deg);
+
+    @media (max-width: 40rem){
+        bottom: -514px;
+        right: -503px;
+        height: 3rem;
+    }
 }

@@ -16,6 +16,12 @@ body {
   max-height: 100vh;
 }
 
+@media (max-width: 40rem) {
+  body {
+    position: relative;
+  }
+}
+
 #top-circle {
   position: absolute;
   top: -500px;
@@ -24,8 +30,15 @@ body {
           transform: rotate(45deg);
 }
 
+@media (max-width: 40rem) {
+  #top-circle {
+    top: -632px;
+    left: -704px;
+  }
+}
+
 section {
-  background-color: #fff;
+  background-color: white;
   height: 24rem;
   width: 21.5rem;
   position: absolute;
@@ -34,13 +47,30 @@ section {
   border-radius: 1.2rem;
 }
 
+@media (max-width: 40rem) {
+  section {
+    background-color: white;
+    height: 27rem;
+    width: 24.5rem;
+    position: absolute;
+    top: 10rem;
+    left: 1rem;
+    border-radius: 1.2rem;
+  }
+}
+
 section .img {
   position: relative;
   width: 21.5rem;
   height: 38%;
   border-top-left-radius: 1.2rem;
   border-top-right-radius: 1.2rem;
-  background-color: brown;
+}
+
+@media (max-width: 40rem) {
+  section .img {
+    width: 24.5rem;
+  }
 }
 
 section .img #card {
@@ -60,7 +90,7 @@ section .img::after {
   border-radius: 50%;
   display: inline-block;
   position: absolute;
-  background: url("/Images/image-victor.jpg") no-repeat;
+  background: url("../Images/image-victor.jpg");
 }
 
 section .intro {
@@ -140,6 +170,8 @@ section .stats #stat-content {
   margin-top: 5px;
   font-size: .6rem;
   font-family: "Kumbh Sans", sans-serif;
+  display: block;
+  text-align: center;
   letter-spacing: 2px;
 }
 
@@ -149,5 +181,13 @@ section .stats #stat-content {
   right: -170px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+@media (max-width: 40rem) {
+  #bottom-circle {
+    bottom: -514px;
+    right: -503px;
+    height: 3rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
