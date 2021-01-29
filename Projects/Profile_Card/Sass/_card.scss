@@ -1,60 +1,16 @@
-@import 'variable';
-
-*html{
-    font-size: 100%;
-}
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: $bc;
-    overflow: hidden;
-    max-width: 100%;
-    max-height: 100vh;
-
-    @media (max-width: 40rem){
-        position: relative;
-    }
-}
-
-#top-circle{
-    position: absolute;
-    top: -500px;
-    left: -210px;
-    transform: rotate(45deg);
-
-    @media (max-width: 40rem){
-        top: -632px;
-        left: -704px;
-    }
-}
-
 section{
     background-color: rgb(255, 255, 255);
     height:24rem;
     width: 21.5rem;
-    position: absolute;
-    top: 10rem;
-    left: 40rem;
     border-radius: 1.2rem;
 
-    @media (max-width:40rem){
-        background-color: white;
-        height: 27rem;
-        width: 24.5rem;
-        position: absolute;
-        top: 10rem;
-        left: 1rem;
-        border-radius: 1.2rem;
-}
-
 
     
-    
+
+    @media (max-width:375){
+        width: 20.31rem;
+    }
+
 
     .img{
         position: relative;
@@ -63,10 +19,7 @@ section{
         border-top-left-radius: 1.2rem;
         border-top-right-radius: 1.2rem;
 
-        @media (max-width:40rem){
-            width: 24.5rem;
-        }
-        
+      
 
         #card{
         width: 100%;
@@ -154,18 +107,4 @@ section{
     }
     
     
-}
-
-
-#bottom-circle{
-    position: absolute;
-    bottom: -580px;
-    right: -170px;
-    transform: rotate(45deg);
-
-    @media (max-width: 40rem){
-        bottom: -514px;
-        right: -503px;
-        height: 3rem;
-    }
 }

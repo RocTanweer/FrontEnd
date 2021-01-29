@@ -1,0 +1,79 @@
+html{
+    font-size: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+
+   background-image: url(../Images/bg-pattern-top.svg),
+    url(../Images/bg-pattern-bottom.svg);
+
+    background-position: 
+    bottom 40vh right 48vw,
+    top 50vh left 48vw;
+
+    background-repeat: no-repeat,
+    no-repeat;
+    background-color: $bc;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    // @media screen and (max-width:375px){
+    //     overflow: hidden;
+    // }
+    
+    // To set any background image on an element without 
+    // affecting its element, Using pseudo element of that element
+
+    // &::before{
+    //     content: '';
+    //     background: url(../Images/bg-pattern-top.svg) no-repeat;
+    //     width: 62rem;
+    //     height: 59rem;
+    //     position: absolute;
+    //     top: -30rem;
+    //     left: -13.5rem;
+    //     z-index: -2;
+    //     transform: rotate(7deg);
+
+    //     @media (max-width:375px){
+    //         top: -30rem;
+    //         left: -47.5rem;
+    //     }
+
+    // }
+
+    // &::after{
+    //     content: '';
+    //     background: url(../Images/bg-pattern-bottom.svg) no-repeat;
+    //     width: 61.125rem;
+    //     height: 61.125rem;
+    //     position: absolute;
+    //     top: 25rem;
+    //     left: 48rem;
+    //     z-index: -1;
+
+    //     transform: rotate(45deg);
+    //     @media (max-width:375px){
+    //         top: 27rem;
+    //         left: 8rem;
+    //         display: none;
+    //     }
+    // }
+
+    
+}
