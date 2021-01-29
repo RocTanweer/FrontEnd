@@ -12,7 +12,7 @@ $tc : hsl(0, 0%, 81%);
 // This is the common part that exists in each direct child of the body
 // So I decided to make a mixin for this 
 // Child one is a bit different from others so i added @content in the mixin and a variable
-@mixin cmnprt1($a) {
+@mixin common($a) {
     .box-title{
         grid-row: 1 / 2;
         grid-column-start: 1;
