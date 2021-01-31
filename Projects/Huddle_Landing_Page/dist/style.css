@@ -249,6 +249,11 @@ a {
   }
 }
 
+.btn {
+  -webkit-box-shadow: 3px 5px 8px 0px rgba(0, 0, 0, 0.472);
+          box-shadow: 3px 5px 8px 0px rgba(0, 0, 0, 0.472);
+}
+
 @media screen and (max-width: 64rem) {
   .btn {
     padding: 1.32rem 5.15rem;
