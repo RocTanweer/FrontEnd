@@ -11,4 +11,4 @@ This is a basic landing page for a fictional **Community Building** company
 
 You may visit the site [here](roc.tanweer.github.io/huddleMultiSec)
 
-![Site Preview](./images/desktop-preview.jpg)
+![Site Preview](./images/desktop-design.jpg)
