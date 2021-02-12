@@ -1,0 +1,93 @@
+// contains style of the website globally
+
+html{
+    font-size: 100%; // 16px
+    scroll-behavior: smooth;
+}
+
+*, *::after, *::before{  // adding these to every elements including pseudo-elements
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: $fontSize;
+    font-family: $primaryFont;
+}
+
+h1,h2,h3{
+    color: $darkGrayishBlue;
+    font-weight: 600;
+}
+
+h1{
+    font-size: rem(44);
+    @include responsive(small) {
+        font-size: rem(32);
+    }
+}
+
+h2{
+    font-size: rem(37);
+    @include responsive(small) {
+        font-size: rem(28);
+    }
+}
+
+h3{
+    font-size: rem(24);
+}
+
+p{
+    color: $grayishBlue;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition: all 150ms ease-in-out;
+}
+
+
+// utility classes
+
+.h1-para{
+    font-size: rem(20);
+    @include responsive(small) {
+        font-size: rem(16);
+    }
+}
+
+.h2-para{
+    font-size: rem(17);
+}
+
+.h3-para{
+    font-size: rem(15);
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.btn{
+    padding: rem(22) rem(36);
+    border-radius: rem(57/2);
+    font-weight: 600;
+    font-size: rem(16);
+
+    @include responsive(small) {
+    padding: rem(22) rem(80);
+    }
+
+    @include responsive(extraSmall){
+    padding: rem(22) rem(64);        
+    }
+}
+
+

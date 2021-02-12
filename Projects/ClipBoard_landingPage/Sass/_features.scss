@@ -1,0 +1,331 @@
+.snippet {
+    width: 100%;
+    max-width: rem(1440);
+    margin: auto;
+    height: auto;
+
+    @include responsive(tab) {
+        margin-bottom: rem(162);
+    }
+
+    @include responsive(small) {
+        margin-bottom: rem(198);
+    }
+
+    &__heading {
+        margin: auto;
+        text-align: center;
+        max-width: rem(679);
+        margin-bottom: rem(84);
+
+        @include responsive(small) {
+            padding: 0 rem(32);
+        }
+
+        h2 {
+            margin-bottom: rem(30);
+            @include responsive(small) {
+                margin-bottom: rem(25);
+            }
+        }
+
+        p{
+            line-height: 1.5;
+        }
+    }
+
+    &__grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(37, 1fr);
+        position: relative;
+
+        @include responsive(large) {
+            display: flex;
+            flex-flow: column wrap;
+            padding: 0 rem(20);
+        }
+
+        .comp {
+            position: absolute;
+            top: 0;
+            left: rem(-56);
+
+            @include responsive(large) {
+                position: relative;
+                top: 0;
+                left: 0;
+                margin-bottom: rem(20);
+            }
+
+            img{
+                width: 100%;
+            }
+        }
+
+        &__content {
+            max-width: rem(338);
+            grid-column: 23/32;
+            margin-top: rem(72);
+            margin-bottom: rem(264);
+
+            @include responsive(tab) {
+                grid-column: 29/37;
+                margin-bottom: rem(20);
+            }
+
+            @include responsive(large){
+                text-align: center;
+                margin: auto;
+            }
+
+            .content {
+                margin-bottom: rem(70);
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                h3{
+                    margin-bottom: rem(12.8);
+                }
+
+                p{
+                    line-height: 1.7;
+                }
+            }
+        }
+    }
+}
+
+
+.access {
+    width: 100%;
+    height: auto;
+    margin-bottom: rem(174);
+
+    &__heading {
+        @extend .snippet__heading;
+
+        p{
+            margin-bottom: rem(68);
+        }
+    }
+
+    &__mobile {
+        max-width: rem(810);
+        margin: auto;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.workflow {
+    width: 100%;
+    height: auto;
+    margin-bottom: rem(169);
+
+    &__heading {
+        @extend .snippet__heading;
+
+        @include responsive(small) {
+            margin-bottom: rem(94);
+        }
+    }
+
+    &__content {
+        width: 100%;
+        height: auto;
+        padding: 0 rem(166) 0 rem(175);
+        margin-bottom: rem(164);
+
+        @include responsive(tab) {
+            padding: 0 rem(150) 0 rem(159);
+        }
+
+        @include responsive(small) {
+            padding: 0 rem(17);
+            margin-bottom: rem(135);
+        }
+
+        .text, .preview {
+            height: rem(202);
+        }
+
+        .blackList{
+            margin-right: rem(45);
+            @include responsive(large){
+                margin-right: 0;
+            }
+        }
+
+        .text {
+            margin-right: rem(36);
+            @include responsive(tab) {
+                margin-right: 0;
+            }
+        }
+
+        &__sect {
+            width: rem(332);
+            text-align: center;
+
+            @include responsive(large) {
+                margin-bottom: rem(84);
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+
+            @include responsive(small) {
+                margin-bottom: rem(60);
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+
+
+
+            h3{
+                margin-bottom: rem(26);
+            }
+            
+            p{
+                line-height: 1.7;
+                @include responsive(small) {
+                    font-size: rem(17);
+                }
+            }
+
+            img{
+                margin-bottom: rem(46);
+            }
+        }
+    }
+
+
+    &__sponsors {
+        width: 100%;
+        height: auto;
+        padding: 0 rem(155);
+        @include responsive(tab) {
+            padding: 0 rem(43);
+        }
+
+        @include responsive(large){
+            padding: 0;
+            flex-flow: column wrap;
+        }
+
+        .sponsor-img:not(:last-child) {
+            @include responsive(large){
+                margin-bottom: rem(48);
+            }
+
+            @include responsive(large) {
+                margin-bottom: rem(66);
+            }
+        }
+
+        #google{
+            margin-right: rem(98);
+
+            @include responsive(tab) {
+                margin-right: rem(50);
+            }
+
+            @include responsive(large) {
+                margin-right: 0;
+
+            }
+        }
+
+        #ibm {
+            margin-right: rem(108);
+
+            @include responsive(tab) {
+                margin-right: rem(60);
+            }
+
+            @include responsive(large){
+                margin-right: 0;
+            }
+        }
+
+        #microsoft {
+            margin-right: rem(93);
+
+            @include responsive(tab) {
+                margin-right: rem(45);
+            }
+
+            @include responsive(large){
+                margin-right: 0;
+            }
+        }
+
+        #hewlett {
+            margin-right: rem(93);
+
+            @include responsive(tab) {
+                margin-right: rem(45);
+            }
+
+            @include responsive(large){
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+.reference {
+    width: 100%;
+    height: auto;
+    margin-bottom: rem(152);
+
+    &__heading{
+        @extend .snippet__heading;
+
+        p{
+            margin-bottom: rem(53);
+
+            @include responsive(large) {
+                font-size: rem(16);
+            }
+        }
+    }
+
+    #ios{
+        background-color: $strongCyan;
+        margin-right: rem(17);
+
+        &:hover{
+            background-color: lighten($strongCyan, 10%);
+        }
+
+        @include responsive(small) {
+            margin-right: 0;
+            margin-bottom: rem(26);
+        }
+
+        @include responsive(extraSmall) {
+            padding: rem(22) rem(48); 
+        }
+        }
+
+    #mac{
+        background-color: $lightBlue;
+
+        &:hover{
+            background-color: lighten($lightBlue, 10%);
+        }
+
+        @include responsive(extraSmall) {
+            padding: rem(22) rem(48); 
+        }
+
+        }
+}

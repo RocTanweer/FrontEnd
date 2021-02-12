@@ -1,0 +1,72 @@
+// This one will contain styling of header and hero section of this site
+
+header{
+    width: 100%;
+    height: rem(324);
+    text-align: center;
+    padding-top: rem(133);
+    background-image: url(../images/bg-header-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include responsive(small) {
+        background-image: url(../images/bg-header-mobile.png);
+        padding-top: rem(123);
+        height: rem(320);
+    }
+
+    .logo-link{
+        width: rem(125);
+        height: rem(125);
+    }
+}
+
+.hero{
+    width: 100%;
+    height: auto;
+    margin-bottom: rem(162);
+
+    @include responsive(small) {
+        margin-bottom: rem(139);
+        padding: 0 rem(16);
+    }
+
+    &__content{
+        max-width: rem(690);
+        margin: auto;
+        text-align: center;
+
+        h1{
+            margin-bottom: rem(27);
+            @include responsive(small) {
+                margin-bottom: rem(26);
+            }
+        }
+
+        p{
+            margin-bottom: rem(52);
+        }
+
+        #ios{
+            background-color: $strongCyan;
+            margin-right: rem(17);
+
+            &:hover{
+                background-color: lighten($strongCyan, 10%);
+            }
+
+            @include responsive(small) {
+                margin-right: 0;
+                margin-bottom: rem(26);
+            }
+        }
+
+        #mac{
+            background-color: $lightBlue;
+            &:hover{
+            background-color: lighten($lightBlue, 10%);
+        }
+        }
+    }
+}

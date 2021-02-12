@@ -1,0 +1,38 @@
+// contains the variables and mixin to be used throughout the website
+
+
+// conversion from pixel to rem
+@function rem($var) {
+    $result : $var / 16;
+    @return $result * 1rem
+};
+
+// colors 
+$strongCyan : hsl(171, 66%, 44%);
+$lightBlue : hsl(233, 100%, 69%);
+$darkGrayishBlue : hsl(210, 10%, 33%);
+$grayishBlue : hsl(201, 11%, 66%);
+
+
+// fonts
+$fontSize : rem(18);
+$primaryFont : 'Bai Jamjuree', sans-serif;
+
+
+// responsiveness 
+$breakPoints : (
+    'extraSmall' : rem(320),
+    'small' : rem(375),
+    'large' : rem(768),
+    'tab' : rem(1024),
+);
+
+@mixin responsive($size) {
+    $breakPoint : map-get($breakPoints, $size);
+
+    @media screen and (max-width : $breakPoint){
+        @content
+    }
+}
+
+
