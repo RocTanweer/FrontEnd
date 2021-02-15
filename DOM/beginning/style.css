@@ -1,0 +1,105 @@
+html{
+    font-size: 100%;
+}
+
+*{
+    box-sizing: border-box;
+    line-height: 1.3;
+}
+
+body{
+    color: rgb(29, 29, 29);
+    background-color: rgb(241, 236, 246);
+    margin: 0;
+
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    background-color: rgb(55, 160, 55);
+    padding: 1px 12px;
+    margin-bottom: 22px;
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.089);
+    width: 100%;
+    padding: 20px;
+}
+
+#container__form{
+   margin-bottom: 60px;
+}
+
+#input{
+    height: 30px;
+    width: 50%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 6px;
+}
+
+#input:focus {
+    outline: 1px solid rgb(55, 160, 55);
+}
+
+#submit{
+    height: 30px;
+    width: 90px;
+    border: 1px solid rgb(55, 160, 55);
+    border-radius: 5px;
+    transition: all 150ms ease-in-out;
+}
+
+#submit:focus, #submit:active {
+    outline: none;
+}
+
+#submit:active{
+    background-color: rgb(55, 160, 55);
+    color: rgb(232, 255, 232);
+}
+
+#container__box{
+    display: none;
+}
+
+ul{
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+li{
+    list-style: none;
+    width: 90%;
+    height: auto;
+    margin-bottom: 2px;
+    padding: 15px 5px;
+}
+
+li:nth-child(odd) {
+    background-color: white;
+}
+
+.btn{
+    color:white;
+    background-color: rgb(29, 29, 66);
+    border: none;
+    padding: 9px 310px;
+    font-size: 16px;
+    font-weight: bolder;
+    transition: all 150ms ease-in-out;
+}
+
+.btn, .btn:active, .btn:focus{
+    outline: none;
+}
+
+.btn:active{
+    background-color: rgb(55, 160, 55);
+    color: rgba(0, 0, 0, 0.787);
+}
