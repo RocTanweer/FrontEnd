@@ -1,0 +1,324 @@
+html {
+  font-size: 100%;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ecf2f8;
+  height: 100vh;
+  width: 100%;
+  font-weight: 500;
+  font-family: "Manrope", sans-serif;
+}
+
+@media screen and (max-width: 48rem) {
+  body {
+    padding: 0 1.5rem;
+  }
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #48556a;
+  line-height: 1.3;
+  margin-bottom: 1.125rem;
+}
+
+@media screen and (max-width: 23.4375rem) {
+  h1 {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+p {
+  font-size: 0.8125rem;
+  color: #9eafc2;
+  line-height: 1.5;
+  margin-bottom: 1.375rem;
+}
+
+@media screen and (max-width: 23.4375rem) {
+  p {
+    font-size: 0.75rem;
+    margin-bottom: 2.0625rem;
+  }
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 45.75rem;
+  height: 17.5rem;
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 33px 12px #9eafc259;
+          box-shadow: 5px 5px 33px 12px #9eafc259;
+  border-radius: 0.625rem;
+}
+
+@media screen and (max-width: 23.4375rem) {
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    width: 100%;
+    height: 30.75rem;
+  }
+}
+
+.card__img {
+  width: 17.8125rem;
+  height: 100%;
+}
+
+@media screen and (max-width: 23.4375rem) {
+  .card__img {
+    width: 100%;
+    height: 12.5625rem;
+  }
+}
+
+.card__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.625rem 0 0 0.625rem;
+}
+
+@media screen and (max-width: 23.4375rem) {
+  .card__img img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.card__content {
+  width: 25.3125rem;
+  height: 100%;
+  padding: 2.4375rem 2.3125rem 1.9375rem 0;
+  position: relative;
+}
+
+@media screen and (max-width: 23.4375rem) {
+  .card__content {
+    width: 100%;
+    padding: 2.625rem 2.0625rem 0 2.0625rem;
+  }
+}
+
+.card__content .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .card__content .profile {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media screen and (max-width: 23.4375rem) {
+  .card__content .profile {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.profile-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profile-detail {
+  margin-left: 1.0625rem;
+}
+
+.profile-detail #name {
+  margin-bottom: 0;
+  font-weight: 700;
+  color: #48556a;
+}
+
+.profile-detail #date {
+  margin-bottom: 0;
+}
+
+#main-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+#share {
+  border: none;
+  color: white;
+  border-radius: 50%;
+  padding: 0.5rem 0.5rem;
+  position: relative;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+@media screen and (max-width: 48rem) {
+  #share {
+    margin-left: 2.5rem;
+  }
+}
+
+#share:hover {
+  background-color: #6d7f97;
+}
+
+#share:hover path {
+  fill: white;
+}
+
+#share:active, #share:focus, #share:visited {
+  border: none;
+  outline: none;
+}
+
+#icons-container {
+  visibility: hidden;
+  position: absolute;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15.5625rem;
+  height: 3.625rem;
+  padding: 1.125rem 2.1875rem 1.0625rem 2.3125rem;
+  top: 47%;
+  left: 56.9%;
+  border-radius: 0.625rem;
+  background-color: #48556a;
+}
+
+@media screen and (max-width: 48rem) {
+  .icons {
+    left: 25.9%;
+  }
+}
+
+@media screen and (max-width: 23.4375rem) {
+  .icons {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    width: 20.5rem;
+    left: -0.1%;
+    top: 78%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    height: 4rem;
+  }
+}
+
+.icons span {
+  letter-spacing: 0.25rem;
+  color: #9eafc2;
+  font-size: 0.8125rem;
+}
+
+@media screen and (max-width: 23.4375rem) {
+  .icons span {
+    margin-right: 1rem;
+  }
+}
+
+.icons a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.icons::after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 98%;
+  left: 43%;
+  border-left: 0.9375rem solid transparent;
+  border-right: 0.9375rem solid transparent;
+  border-top: 0.9375rem solid #48556a;
+}
+
+@media screen and (max-width: 23.4375rem) {
+  .icons::after {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

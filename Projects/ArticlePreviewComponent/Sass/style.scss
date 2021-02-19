@@ -1,0 +1,254 @@
+@import 'variables';
+
+html{
+    font-size: 100%;
+}
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightGrayishBlue;
+    height: 100vh;
+    width: 100%;
+    font-weight: 500;
+    font-family: $manRope;
+
+    @include responsive(large) {
+        padding: 0 rem(24);
+    }
+}
+
+h1{
+    font-size: rem(20);
+    font-weight: 700;
+    color: $veryDarkGrayishBlue;
+    line-height: 1.3;
+    margin-bottom: rem(18);
+
+    @include responsive(small) {
+        font-size: rem(16);
+        line-height: 1.5;
+    }
+}
+
+p{
+    font-size: rem(13);
+    color: $grayishBlue;
+    line-height: 1.5;
+    margin-bottom: rem(22);
+
+    @include responsive(small) {
+        font-size: rem(12);
+        margin-bottom: rem(33);
+    }
+}
+
+
+.card{
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    width: rem(732);
+    height: rem(280);
+    background-color: white;
+    box-shadow: 5px 5px 33px 12px #9eafc259;
+    border-radius: rem(10);
+
+    @include responsive(small) {
+        flex-flow: column;
+        width: 100%;
+        height: rem(492);
+    }
+
+
+
+
+    &__img{
+        width: rem(285);
+        height: 100%;
+        
+
+        @include responsive(small) {
+            width: 100%;
+            height : rem(201);
+        }
+
+
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: rem(10) 0 0 rem(10);
+
+            @include responsive(small) {
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+            }
+        }
+    }
+
+
+    &__content{
+        width: rem(405);
+        height: 100%;
+        padding: rem(39) rem(37) rem(31) 0;
+        position: relative;
+
+        @include responsive(small) {
+            width: 100%;
+            padding: rem(42) rem(33) 0 rem(33);
+        }
+
+        .profile{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            @include responsive(large){
+                justify-content: start;
+            }
+
+            @include responsive(small) {
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+.profile-main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+
+.profile-detail{
+    margin-left: rem(17);
+
+    #name{
+        margin-bottom: 0;
+        font-weight: 700;
+        color: $veryDarkGrayishBlue;
+    }
+
+    #date{
+        margin-bottom: 0;
+    }
+}
+
+#main-avatar{
+    width: rem(40);
+    height: rem(40);
+    border-radius: 50%;
+}
+
+#share{
+    border: none;
+    color: white;
+    border-radius: 50%;
+    padding: rem(8) rem(8);
+    position: relative;
+    transition: background-color 200ms ease-in-out;
+
+    @include responsive(large) {
+        margin-left: rem(40);
+    }
+
+   
+
+    &:hover{
+        background-color: $desaturatedDarkBlue;
+        path{
+            fill: white;
+        }
+    }
+
+    &:active, &:focus, &:visited{
+        border: none;
+        outline: none;
+    }
+}
+
+
+
+#icons-container{
+    visibility: hidden;
+    position: absolute;
+
+
+}
+
+.icons{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    width: rem(249);
+    height: rem(58);
+    padding: rem(18) rem(35) rem(17) rem(37);
+    top: 47%;
+    left: 56.9%;
+    border-radius: rem(10);
+    background-color: $veryDarkGrayishBlue;
+
+    @include responsive(large) {
+            left: 25.9%;
+        }
+
+    @include responsive(small) {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        width: rem(328);
+        left: -0.1%;
+        top: 78%;
+        justify-content: start;
+        height: rem(64);
+
+    }
+
+    span{
+        letter-spacing: rem(4);
+        color: $grayishBlue;
+        font-size: rem(13);
+        @include responsive(small) {
+            margin-right: rem(16);
+        }
+    }
+
+    a {
+        &:not(:last-child){
+            margin-right: rem(16);
+        }
+    }
+
+   &::after{
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 98%;
+        left: 43%;
+        border-left: rem(15) solid transparent;
+        border-right: rem(15) solid transparent;
+        border-top: rem(15) solid #48556a;
+
+        @include responsive(small){
+            display: none;
+        }
+    }
+}
+

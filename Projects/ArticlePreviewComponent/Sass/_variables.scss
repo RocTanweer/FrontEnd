@@ -1,0 +1,33 @@
+// conversion from pixel to rem
+@function rem($var) {
+    $result : $var / 16;
+    @return $result * 1rem
+};
+
+// responsiveness 
+$breakPoints : (
+    'extraSmall' : rem(320),
+    'small' : rem(375),
+    'large' : rem(768),
+    'tab' : rem(1024),
+);
+
+@mixin responsive($size) {
+    $breakPoint : map-get($breakPoints, $size);
+
+    @media screen and (max-width : $breakPoint){
+        @content
+    }
+}
+
+
+// color
+$veryDarkGrayishBlue : hsl(217, 19%, 35%);
+$desaturatedDarkBlue : hsl(214, 17%, 51%);
+$grayishBlue : hsl(212, 23%, 69%);
+$lightGrayishBlue : hsl(210, 46%, 95%);
+
+// fonts
+$fontSize : rem(13);
+$manRope : 'Manrope', sans-serif;
+
