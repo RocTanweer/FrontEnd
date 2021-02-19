@@ -21,6 +21,6 @@ Thank You!
 - Live Sass compiler(extension)
 - Vs Code
 
-You may visit the site [here](https://itemlister.vercel.app/)
+You may visit the site [here](https://article-card-section.vercel.app/)
 
 ![Huddle-Landing-Page](./design/desktop-preview.jpg)
