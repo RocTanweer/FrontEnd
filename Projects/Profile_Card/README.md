@@ -8,4 +8,4 @@ This is a simple demonstration of profile page of a user
 
 You may visit the site [here](https://roctanweer.github.io/profile_card/)
 
-![Page review](./Images/P_P.jpg)
+![Page review](./Images/P_P.JPG)
