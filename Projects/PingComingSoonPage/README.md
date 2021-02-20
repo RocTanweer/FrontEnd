@@ -7,6 +7,7 @@ Perfect for Screen width 1440px, 1024px, 768px, 375px and 320px
 ## Tools and Techniques used
 - HTML
 - Sass
+- Vanilla JavaScript
 - Flex Box
 - Absolute Positioning 
 - Live Sass compiler(extension)
