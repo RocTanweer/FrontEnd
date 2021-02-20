@@ -14,4 +14,4 @@ Perfect for Screen width 1440px, 1024px, 768px, 375px and 320px
 
 You may visit the site [here](https://roctanweer.github.io/clipBoardLandingPage/)
 
-![PING.](./Designs/desktop-preview.jpg)
+![PING.](./design/desktop-preview.jpg)
