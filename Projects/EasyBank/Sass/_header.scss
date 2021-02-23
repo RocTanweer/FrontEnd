@@ -1,0 +1,166 @@
+.header{
+    justify-content: space-between;
+    padding: rem(0) rem(165);
+    background-color: $white;
+    position: relative;
+    z-index: 3;
+    height: rem(81);
+
+    @include responsive(tab) {
+        padding: rem(0) rem(37);
+    }
+
+    @include responsive(small) {
+        padding: rem(0) rem(23);
+        height: rem(64);
+    }
+
+
+    &__logo{
+        width: rem(190);
+
+        @include responsive(small) {
+            width: rem(140);
+        }
+    }
+
+    &__ham{
+        >div{
+            width: rem(25);
+
+
+            >span{
+                display: block;
+                width: 100%;
+                height: rem(2);
+                background-color: $darkBlue;
+                transform-origin: 3px 1px;
+                transition: 500ms;
+
+                &:not(:last-child){
+                    margin-bottom: rem(5);
+                }
+            }
+        }
+
+    }
+
+
+    &__links{
+        margin-left: rem(138);
+        li {
+            font-size: rem(14);
+            
+
+            
+            
+            &:not(:last-child) {
+                margin-right: rem(32);
+            }
+
+
+            a{
+                color: $grayishBlue;
+                padding-bottom: rem(27);
+
+                &:hover{
+                    border-bottom: 5px solid $limeGreen;
+                    color: $darkBlue;
+                }
+            }
+
+        }
+    }
+
+    &__btn{
+        @include responsive(tab){
+            padding: rem(15) rem(18);
+            font-size: rem(13);
+        }
+    }
+
+    #header__overlay{
+        
+
+        position: fixed;
+        visibility: hidden;
+        top: 64px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, hsla(233, 26%, 24%, 0.918), hsla(233, 26%, 24%, 0.123));
+        z-index: -3;
+    }
+
+
+    &.mobile-toggle{
+
+        #hamBtn{
+            span{
+                &:nth-child(1){
+                    transform:rotate(45deg);
+                }   
+
+                &:nth-child(2){
+                    transform: scaleX(-1);
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform:rotate(-45deg);
+    
+                }
+
+            }
+        }
+    }
+
+
+    .mob-menu{
+            flex-flow: column wrap;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            visibility: hidden;
+            top: 5.5rem;
+            width: 35.5625rem;
+            height: 21.625rem;
+            padding: 2.1875rem 0;
+            background-color: white;
+
+       @include responsive(small) {
+            left: 50%;
+            transform: translate(-50%);
+            width: 20.5625rem;
+            padding: 0;
+            height: rem(267);
+       }
+
+       @include responsive(extraSmall){
+           width: 16.5625rem;
+       }
+        
+
+        a{
+            font-weight: 400;
+            color: $darkBlue;
+            font-size: rem(19);
+
+            @include responsive(large) {
+                padding: 0 rem(200);
+            }
+            @include responsive(small) {
+                font-size: rem(18);
+                padding: 0 rem(70);
+            }
+
+            &:active, &:hover{
+                color: $limeGreen;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: rem(25);
+            }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.wrapper{
+    .latest-articles{
+        background-color: $veryLightGray;
+        margin-bottom: rem(107);
+        padding: 0 rem(165);
+        width: 100%;
+
+        @include responsive(tab) {
+            padding: 0 rem(81);
+        }
+
+        @include responsive(small) {
+            padding: 0 rem(24);
+        }
+
+        h2{
+            margin-bottom: rem(58);
+
+            @include responsive(large){
+                text-align: center;
+            }
+
+            @include responsive(small) {
+                margin-bottom: rem(35);
+            }
+        }
+
+        .articles{
+            
+            @include responsive(large) {
+                flex-flow: column wrap;
+            }
+
+            #article-2{
+                @include responsive(tab) {
+                    margin-right: 0;
+                }
+            }
+
+            .article{
+                width: 15.8rem;
+                height: rem(387);
+                border-radius: rem(10);
+                
+                &:not(:last-child) {
+                    margin-right: rem(32);
+
+                    @include responsive(large) {
+                        margin-right: 0;
+                    }
+
+                    @include responsive(small) {
+                        margin-bottom: rem(68);
+                    }
+                }
+               
+
+                @include responsive(tab) {
+                    width: rem(288);
+                    height: rem(424);
+                }
+
+                @include responsive(large){
+                    width: rem(336);
+                }
+
+                @include responsive(small){
+                    width: 100%;
+                    height: rem(351);
+                } 
+                
+
+
+                img{
+                    width: 100%;
+                    height: rem(200);
+                    margin-bottom: rem(30);
+                    border-top-left-radius: rem(10);
+                    border-top-right-radius: rem(10);
+
+                    @include responsive(large){
+                        margin-bottom: rem(14);
+                    }
+                }
+
+                &__details{
+                    padding: 0 rem(23);
+
+                    .author{
+                        font-size: rem(10);
+                        color: $grayishBlue;
+                        margin-bottom: rem(15);
+                    }
+
+                    h4{
+                        margin-bottom: rem(13);
+                    }
+
+                    p{
+                        font-size: rem(13);
+                    }
+                }
+            }
+        }
+    }
+}

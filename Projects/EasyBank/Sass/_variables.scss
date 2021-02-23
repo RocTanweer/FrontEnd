@@ -1,0 +1,50 @@
+// responsiveness
+
+$breakPoints : (
+    'extraSmall' : 20rem,
+    'small'  : 23.4375rem,
+    'large' : 48.0625rem,
+    'tab' : 64rem,
+    'pc' : 90rem,
+    'largePc' : 12.5rem,
+);
+
+
+@mixin responsive($size) {
+    $breakPoint : map-get($breakPoints, $size);
+
+    @media screen and (max-width: $breakPoint){
+        @content
+    }
+};
+
+@mixin responsive-min($size) {
+    $breakPoint : map-get($breakPoints, $size);
+
+    @media screen and (min-width: $breakPoint){
+        @content
+    }
+};
+
+
+
+
+// conversion from pixel to rem
+@function rem($var) {
+    $result : $var / 16;
+    @return $result * 1rem;
+};
+
+
+// colors 
+$darkBlue : hsl(233, 26%, 24%);
+$limeGreen : hsl(136, 65%, 51%);
+$brightCyan : hsl(192, 70%, 51%);
+$grayishBlue : hsl(233, 8%, 62%);
+$lightGrayishBlue : hsl(220, 16%, 96%);
+$veryLightGray : hsl(0, 0%, 98%);
+$white : hsl(0, 0%, 100%);
+
+// fonts
+$fontSize : rem(18);
+$publicSans : 'Public Sans', sans-serif; // 300 400 and 700

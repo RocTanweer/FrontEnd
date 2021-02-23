@@ -1,0 +1,214 @@
+.wrapper{
+    height: rem(1328);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+
+    @include responsive(large) {
+        overflow:visible;  
+    }
+    
+    
+    &__bg{
+        position: absolute;
+        right: -9%;
+        top: -4%;
+        
+        
+
+            @include responsive(tab) {
+                width: rem(600);
+                position: absolute;
+                right: -10%;
+                top: -3%;
+            }
+
+            @include responsive(large) {
+                right: 10%;
+                top: -3%;
+            }
+
+            @include responsive(small) {
+                width: rem(328);
+                top : -2.9%;
+            }
+
+            @include responsive(extraSmall) {
+                width: 19.5rem;
+                right: 2%;
+            }
+
+            img{
+                width: 100%;
+            }
+    }
+
+    .hero{
+        justify-content: space-between;
+        height: rem(658);
+        width: 100%;
+        padding: 0 rem(163);
+        background-image: url(../images/bg-intro-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left rem(625) top rem(-309);
+        background-color: $veryLightGray;
+       
+    
+        @include responsive(tab) {
+            padding: 0 2.1875rem;
+            background-position: left 24.625rem top -13.125rem;
+        }
+
+        @include responsive(large){
+            flex-flow: column wrap;
+            background-image: url(../images/bg-intro-mobile.svg);
+            background-size: cover;
+            background-position: left 0.625rem top -13.125rem;
+            justify-content: flex-end;
+            height: rem(893);
+            margin-bottom: rem(101);
+        }
+
+        @include responsive(small) {
+            background-size: contain;
+            background-position: left -0.375rem top -3.125rem;
+            padding: 0 rem(35);
+            height: rem(597);
+        }
+
+        @include responsive(extraSmall){
+            height: 34rem;
+        }
+
+        &__text{
+            width: rem(466);
+            height: auto;
+
+            @include responsive(large) {
+                width: 100%;
+                text-align: center;
+            }
+
+            h1{
+                margin-bottom: rem(33);
+            }
+
+            p{
+                margin-bottom: rem(40);
+            }
+
+            .btn{
+                display: inline-block;
+                padding: rem(16) rem(34);
+                font-size: rem(15);
+            }
+        }
+
+
+        
+    
+}
+
+    .feature{
+        padding: rem(64) rem(163);
+        height: rem(675);
+        background-color: $lightGrayishBlue;
+        margin-bottom: rem(96);
+
+        @include responsive(tab) {
+            padding: 0rem 2.1875rem;
+        }
+
+        @include responsive(large) {
+            height: auto;
+        }
+
+        @include responsive(small) {
+            padding: 0 rem(26);
+        }
+
+        &__intro{
+            width: rem(619);
+            margin-bottom: rem(77);
+
+            @include responsive(large) {
+                text-align: center;
+                width: 100%;
+            }
+
+            @include responsive(small) {
+                padding: 0 rem(5);
+            }
+
+            h2{
+                margin-bottom: rem(34);
+            }
+        }
+
+        &__main {
+            margin-bottom: rem(201);
+
+            @include responsive(large) {
+                flex-flow: column wrap;
+                margin-bottom: 0;
+            }
+
+            div{
+                width: rem(257);
+
+                @include responsive(tab) {
+                    width: rem(208);
+                }
+
+                @include responsive(large) {
+                    text-align: center;
+                    width: 27rem;
+                }
+
+                @include responsive(small) {
+                    width: 20.1875rem;
+                }
+
+                @include responsive(extraSmall) {
+                    width: 16.1875rem;
+                }
+
+                &:not(:last-child){
+                    margin-right: rem(14);
+
+                    @include responsive(tab) {
+                        margin-right: rem(30);
+                    }
+
+                    @include responsive(large) {
+                        margin-right: 0;
+                        margin-bottom: rem(45);
+                    }
+                }
+
+                img{
+                    margin-bottom: rem(47);
+                }
+
+                h3{
+                    margin-bottom: rem(30);
+                }
+
+                p{
+                    font-size: rem(16);
+
+                    @include responsive(small) {
+                        font-size: rem(14);
+                    }
+
+                    @include responsive(extraSmall) {
+                        font-size: rem(11);
+                    }
+                }
+            }
+        }
+    }
+
+}

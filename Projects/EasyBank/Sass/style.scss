@@ -1,0 +1,51 @@
+@import 'variables';
+@import 'global';
+@import 'animation';
+@import 'header';
+@import 'wrapper';
+@import 'latestArticles';
+@import 'footer';
+
+
+
+
+/*Steps to complete this project
+
+1. Get all the files from the designer.
+
+2. Make a working directory(Connect all the files).
+
+3. Prepare the index.html , Sass and Js files.
+
+4. Create variables and global Sass partials.
+
+5. Create a header Sass partial: 
+    => make the header along with the Hamburger menu.
+    => hide the ham menu above 768px and hide desktop header below 769px.
+    => make the ham animation.
+    => make the overlay animation sync with mobile menu animation when ham is clicked.
+
+6. Create a wrapper Sass partial:
+    => make a hero div with display flex.(special case must see the code!)
+    => make the pattern as bg of the hero div.
+    => make the hero wrapper section position relative and mobile svg absolute.
+    => make overflow hidden of wrapper section so that mobile svg can be positioned.
+    => make the feature div as usual.
+
+7. Create a latestArticle Sass partials:
+    => make everything normally as nothing is special in this section!.
+
+8. make the footer Sass partials:
+    => After giving required paddings, make the flexed footer section justify-content : space-between.
+    => divide the footer section in three parts:
+        1. for logo and social icons.
+        2. for normal links.
+        3. for CTA and copyright statement.
+    => for logo icon, make the fill color white.
+    => HOVER TRICK for SVG social icons:
+        1. make the path of svg to fill a color(in this case white).
+        2. then add hover effect and change that fill color.
+    => And FINALLY make remaining things as usual!.
+
+*/
+

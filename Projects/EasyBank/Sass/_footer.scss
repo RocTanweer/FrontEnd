@@ -1,0 +1,121 @@
+.footer{
+    justify-content: space-between;
+    width: 100%;
+    height: rem(191);
+    background-color: $darkBlue;
+    padding: rem(45) rem(164);
+
+    @include responsive(tab) {
+        padding: rem(45) rem(22);
+    }
+
+    @include responsive(large){
+        flex-flow: column wrap;
+        height: 36.0625rem;
+    }
+
+    &__logo-icons{
+        
+        &__logo{
+            fill: $white;
+        }
+
+        &__icons{
+            margin-top: rem(53);
+
+            a{
+                .svg-icons{
+                    fill: $white;
+                    transition: all 200ms ease-in-out;
+                }
+
+                &:hover{
+                    .svg-icons{
+                        fill: $limeGreen;
+                    }
+                }
+                
+
+                &:not(:last-child) {
+                    margin-right: rem(12);
+                }
+            }
+
+            @include responsive(large) {
+                margin-bottom: rem(20);
+            }
+
+            @include responsive(small) {
+                margin-top: rem(30);
+                margin-bottom: rem(37);
+            }
+        }
+    }
+
+    &__links{
+        margin-right: rem(163);
+        
+
+        @include responsive(large) {
+            margin-right: 0;
+            text-align: center;
+            flex-flow: column wrap;
+            margin-bottom: rem(32);
+        }
+
+        @include responsive(small) {
+            margin-bottom: rem(36);
+        }
+
+        &__c1{
+            margin-right: rem(129);
+
+            @include responsive(large){
+                margin-right: 0;
+                margin-bottom: rem(20);
+            }
+
+            a{
+                display: block;
+                &:hover{
+                    color: $limeGreen;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: rem(20);
+                }
+            }
+        }
+
+        &__c2{
+            a{
+                display: block;
+                &:hover{
+                    color: $limeGreen;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: rem(20);
+                }
+            }
+        }
+    }
+
+    &__cta-cr{
+        text-align: right;
+        width: rem(251);
+
+        @include responsive(large) {
+            text-align: center;
+        }
+
+        .btn{
+            display: inline-block;
+            margin-bottom: rem(31);
+        }
+
+        #copy-right{
+            font-size: rem(16);
+        }
+    }
+}

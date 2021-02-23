@@ -1,0 +1,131 @@
+html{
+    font-size: 100%;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $veryLightGray;
+    font-family: $publicSans;
+}
+
+h1,h2,h3,h4{
+    color: $darkBlue;
+}
+
+h1,h2,h3,h4{
+    font-weight: 400;
+}
+
+h1{
+    font-size: rem(52);
+    @include responsive(small) {
+        font-size: rem(37);
+    }
+
+    @include responsive(extraSmall) {
+        font-size: 2rem;
+    }
+}
+
+h2{
+    font-size: rem(37);
+
+    @include responsive(small){
+        font-size: rem(29);
+    }
+}
+
+h3{
+    font-size: rem(23);
+
+    @include responsive(small) {
+        font-size: rem(19);
+    }
+}
+
+h4{
+    font-size: rem(15);
+    cursor: pointer;
+    &:hover{
+        color: $limeGreen;
+    }
+}
+
+p{
+    font-size: rem(19);
+    color: $grayishBlue;
+    font-weight: 300;
+    line-height: 1.5;
+
+    @include responsive(small) {
+        font-size: rem(14);
+    }
+
+    @include responsive(extraSmall) {
+        font-size: rem(11);
+    }
+}
+
+a{
+    text-decoration: none;
+    color: $white;
+}
+
+ul{
+    list-style: none;
+}
+
+
+
+
+// utility classes
+
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.trans{
+    transition: all ease-in-out 200ms;
+}
+
+.btn{
+    padding: rem(15) rem(34);
+    font-size: rem(15);
+    font-weight: 700;
+    color: $white;
+    background: linear-gradient(to right, $limeGreen, $brightCyan);
+    border-radius: rem(22.5);
+
+    @include responsive(small){
+        padding: rem(16) rem(34);
+    }
+
+    &:hover{
+        opacity: .7;
+    }
+}
+
+
+
+// hides anything at max width 768px
+.hide-on-mob{
+    @include responsive(large) {
+        display: none;
+    }
+}
+
+// hides anything at min width 769px
+.hide-on-desktop{
+    @include responsive-min(large){
+        display: none;
+    }
+}
+
