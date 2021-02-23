@@ -16,6 +16,6 @@ There is a [brief note](https://github.com/RocTanweer/FrontEnd/blob/master/Proje
 - Live Sass compiler(extension)
 - Vs Code
 
-You may visit the site [here](https://pingcomingsoonpage.vercel.app/)
+You may visit the site [here](https://esybank.netlify.app/)
 
 ![Easybank preview](./design/desktop-preview.jpg)
