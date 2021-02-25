@@ -13,6 +13,6 @@ Perfect for Screen width 1440px, 1024px, 768px, 375px and 320px
 - Live Sass compiler(extension)
 - Vs Code
 
-You may visit the site [here](https://pingcomingsoonpage.vercel.app/)
+You may visit the site [here](https://roctanweer.github.io/ping/.)
 
 ![PING.](./design/desktop-preview.jpg)
