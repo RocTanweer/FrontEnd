@@ -1,4 +1,4 @@
-# Ping coming soon page
+# Easy bank Landing Page
 A landing page for a **Fictional Company** named *Easybank*
 <br>
 Perfect for Screen width 1440px, 1024px, 768px, 375px and 320px

@@ -1,5 +1,6 @@
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -428,6 +429,7 @@ ul {
 @media screen and (max-width: 23.4375rem) {
   .wrapper__bg {
     width: 20.5rem;
+    right: 7%;
     top: -2.9%;
   }
 }
