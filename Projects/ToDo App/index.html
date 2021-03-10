@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/style.css">
+    <title>Todo app</title>
+
+    <!-- <style>
+        .circle::before{
+          z-index: 4;
+        }
+    </style> -->
+</head>
+
+<body>
+    <header class="header"></header>
+
+    <!-- Section of Todo -->
+    <section class="hero">
+        <!-- todo heading -->
+        <div class="hero__heading flex">
+            <h1 class="hero__heading__title" id="title">
+                Todo
+            </h1>
+
+           <button class="hero__heading__toggler" id="theme-toggler">
+                <img  src="./images/icon-sun.svg" alt="toggler">
+           </button>
+        </div>
+
+        <!-- todo form -->
+        <form class="hero__form common-bg flex common-h8" action="">
+            <button tabindex="-1" class="hero__form__btn" type="submit">
+                <span id="form-circle" class="circle">
+                    <span class="inner-circle">
+                    </span>
+                </span>
+            </button>
+
+            <input class="hero__form__field" type="text" id="add-todo" placeholder="Create a new todo..." autocomplete="off">
+        </form>
+
+
+        <!-- todo tasks -->
+        <div class="hero__tasks">
+                
+        </div>
+
+
+        <!-- todo filter-delete-info section -->
+        <div class="hero__bottomSection flex common-bg common-h8">
+            <div class="info">
+                5 item(s) left
+            </div>
+
+            <div class="filter">
+                <button id="showAll" class="filter-btn">
+                    All
+                </button>
+
+                <button id="showActive" class="filter-btn">
+                    Active
+                </button>
+
+                <button id="showCompleted" class="filter-btn">
+                    Completed
+                </button>
+            </div>
+
+            <button class="clear-completed">
+                Clear Completed
+            </button>
+        </div>
+
+        <div class="hero__suggestion">
+            Drag and drop to reorder list
+        </div>
+    </section>
+
+    <script src="./Js/script.js"></script>
+</body>
+
+</html>

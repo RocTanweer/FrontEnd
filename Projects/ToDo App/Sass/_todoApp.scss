@@ -1,0 +1,211 @@
+.hero {
+    width: rem(541);
+    height: auto;
+    margin: rem(78) auto;
+
+
+
+    &__heading {
+        justify-content: space-between;
+        margin-bottom: rem(41);
+
+        &__title{
+            font-size: rem(40);
+            color: $lightGrayishBlueHover;
+            font-weight: 700;
+            letter-spacing: rem(21);
+            text-transform: uppercase;
+        }
+
+        &__toggler{
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+
+            &:focus{
+                outline: 2px dashed $lightGrayishBlueHover;
+            }
+        }
+    }
+
+    &__form{
+        justify-content: space-between;
+        width: 100%;
+        border-radius: rem(7);
+        padding: 0 rem(23);
+        margin-bottom: rem(24);
+
+
+        &__btn{
+            background: transparent;
+            border: none;
+
+            &:focus{
+                outline: none;
+            }
+
+            #form-circle{
+                &::before{
+                    opacity: 0;
+                }
+            }
+        }
+
+
+        &__field{
+            width: 90%;
+            height: 100%;
+            font-size: rem(20);
+            font-weight: 400;
+            background: transparent;
+            border: none;
+            color: $lightGrayishBlue;
+
+            &:focus{
+                outline: none;
+            }
+
+            &::placeholder{
+                font-weight: 400;
+                font-size: rem(19);
+                color: $veryDarkGrayishBlue1;
+
+            }
+        }
+    }
+
+
+    &__tasks{
+        width: 100%;
+        height: auto;
+
+
+        &__task{
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 rem(23);
+            cursor: pointer;
+            position: relative;
+            border-bottom: 1px solid $veryDarkGrayishBlue1;
+
+
+            &:first-child{
+                border-top-left-radius: rem(7);
+                border-top-right-radius: rem(7);
+            }
+
+
+            &:hover{
+                .delete-btn{
+                        opacity: 1;
+                    }
+            }
+
+            label{
+                display: inline-flex;
+                align-items: center;
+                cursor: pointer;
+                color: $lightGrayishBlue;
+                font-size: rem(19);
+                transition: all 200ms ease-in-out;
+                position: relative;
+
+
+                
+
+                &:hover{
+                    .pseudo-opacity::before{
+                        opacity: 1;
+                    }
+                }
+
+                .circle{
+                    margin-right: rem(24);
+
+                    .inner-circle{
+                        top: 5%;
+                        left: 5%;
+                    }
+                }
+
+                .task-name{
+                    overflow: hidden;
+                    position: relative;
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $veryDarkGrayishBlue1;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        transition: transform 200ms ease-in-out;
+                    }
+                }
+            }
+
+            .delete-btn {
+                opacity: 0;
+                transition: opacity 200ms ease-in-out;
+            }
+        }
+    }
+
+
+    &__bottomSection{
+        padding: 0 rem(23);
+        font-size: rem(15);
+        justify-content: space-between;
+        color: $veryDarkGrayishBlue1;
+        margin-bottom: rem(53);
+
+
+        .filter-btn{
+            color: $veryDarkGrayishBlue1;
+            font-weight: 700;
+            background-color: transparent;
+            border : none;
+            font-size: rem(16);
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+
+            &:hover{
+                color: $lightGrayishBlue;
+            }
+
+            &:focus{
+                outline: 2px dashed #ffffff;
+            }
+
+            &:not(:last-child){
+                margin-right: rem(18);
+            }
+        }
+
+        .clear-completed{
+            font-size: rem(15);
+            color: $veryDarkGrayishBlue1;
+            font-weight: 700;
+            background-color: transparent;
+            border : none;
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+
+            &:focus{
+                outline: 2px dashed #ffffff;
+            }
+
+            &:hover{
+                color: $lightGrayishBlue;
+            }
+        }
+    }
+
+    &__suggestion{
+        text-align: center;
+        color: $veryDarkGrayishBlue1;
+        font-size: rem(15);
+    }
+}
