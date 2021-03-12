@@ -22,8 +22,9 @@ function onClick(event) {
         // getting the parent-to-be of newItem
         
         mainList.appendChild(newItem)
-        
 
+    
+        
     }
 
     else{

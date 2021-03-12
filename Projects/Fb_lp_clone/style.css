@@ -77,11 +77,13 @@ body{
     padding: 3px 9px;
     font-size: 17px;
     border: 1px solid rgba(0, 0, 0, 0.24);
-    border-radius:7px
+    border-radius:7px;
+    transition : all ease-in-out 120ms;
 }
 
 .cd:focus{
-    border: 1px solid #1877f2;;
+    outline: 1px solid #1877f2;
+    border: none;
 }
 
 .btn{

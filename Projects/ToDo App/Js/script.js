@@ -2,7 +2,7 @@ const labels = document.querySelectorAll('label');
 const checkSvg = document.querySelectorAll('.checkSvg');
 const innerCircle = document.querySelectorAll('.inner-circles');
 const circle = document.querySelectorAll('.circles');
-const taskName = document.querySelectorAll('.task-name');
+// const taskName = document.querySelectorAll('.task-name');
 const inputField = document.querySelector('.hero__form__field');
 const filterButtons = document.querySelectorAll('.filter-btn');
 
@@ -17,11 +17,7 @@ class Task {
 // class UI to haddle Ui things
 class UI {
     static displayTasksList() {
-        let tasks = [
-            'Complete online javascript coarse', 
-            'Jog in the park 3x',
-            'Study daily at morning',
-        ];
+        let tasks = Store.getTasks();
 
         tasks.forEach( task => {
             UI.addTaskToList(task);
@@ -29,7 +25,7 @@ class UI {
     }
 
     static addTaskToList(task) {
-        const tasksLIst = document.querySelector('.hero__tasks');
+        const tasksList = document.querySelector('.hero__tasks');
         const newTask  = document.createElement('div');
         newTask.className = 'hero__tasks__task flex common-bg common-h8';
         newTask.id = 'task';
@@ -41,14 +37,14 @@ class UI {
                     <img id="checksvg" class="checkSvg" src="./images/icon-check.svg" alt="checksvg">
                 </span>
             </span>
-            <span class="task-name" id="name">
+            <span class="task-name todo-name" id="name">
                 ${task}
             </span>
         </label>
         <img src="./images/icon-cross.svg" class="delete-btn delete" alt="delete-btn">
         `;
 
-        tasksLIst.appendChild(newTask);
+        tasksList.appendChild(newTask);
 
 
     }
@@ -58,6 +54,33 @@ class UI {
     }
 }
 
+
+//  class store to handle Store things
+class Store {
+    static getTasks() {
+        let tasks;
+        if(localStorage.getItem('task.list') == null) {
+            tasks = [];
+        }
+        else{
+            tasks = JSON.parse(localStorage.getItem('task.list'));
+        }
+
+        return tasks
+    }
+
+    static addTasks(task) {
+        let tasks = Store.getTasks();
+        tasks.push(task);
+        localStorage.setItem('task.list', JSON.stringify(tasks));
+    }
+
+    static removeTask(index) {
+        let tasks = Store.getTasks();
+        tasks.splice(index, 1);
+        localStorage.setItem('task.list', JSON.stringify(tasks));
+    }
+}
 
 
 
@@ -73,19 +96,18 @@ inputField.addEventListener('blur', e => {
 })
 
 
-
-function getIndex(element) {
+function getIndex(element, container) {
     // getting nodeList of all the labels
-    let container = element.parentElement.children;
+    // let container = element.parentElement.parentNode;
 
     // looping through and finding the index of target label
     for (let i = 0; i < container.length; i++) {
-        if (container[i] == element) {
+        if (container[i] == element.parentElement) {
             return i
         }
     }
-    return -1
 }
+
 
 
 // displaying all the list
@@ -97,14 +119,18 @@ document.querySelector('.hero__form').addEventListener('submit', e => {
     e.preventDefault();
     let userInput = inputField.value;
     if(userInput){
+        // adding task to UI
         UI.addTaskToList(userInput);
+        // adding task to Store
+        Store.addTasks(userInput)
         UI.clearField();
     }
 })
 
-// dealing with completed tasks by crossing and ticking them
-// With every label in app
+
 document.querySelector('.hero__tasks').addEventListener('click', e => {
+    // dealing with completed tasks by crossing and ticking them
+    // With every label in app
     if(e.target.classList.contains('hidden-el')) {
         let label = e.target.nextElementSibling;
         let circle = label.firstElementChild;
@@ -127,19 +153,25 @@ document.querySelector('.hero__tasks').addEventListener('click', e => {
         }
     }
 
+    // removing a task
     if(e.target.classList.contains('delete')) {
         let tasksList = document.querySelector('.hero__tasks');
+        // removing from Store
+        Store.removeTask(getIndex(e.target, e.currentTarget.children))
+        // removing from UI
         tasksList.removeChild(e.target.parentElement)
     }  
 })
 
-let select = null;
+
 
 
 // filtering event
+let select = localStorage.getItem('task.id') || 'showAll';
 document.querySelector('.filter').addEventListener('click', e => {
     if(e.target.classList.contains('filter-btn')) {
         select = e.target.id;
+        localStorage.setItem('task.id', select)
     }
     
     filterButtons.forEach(button => {
@@ -150,17 +182,77 @@ document.querySelector('.filter').addEventListener('click', e => {
             button.classList.remove('active')
         }
     })
+
 }) 
 
+// to make sure it  also happens withour an event
+filterButtons.forEach(button => {
+    if (button.id == select) {
+        button.classList.add('active')
+    }
+    else {
+        button.classList.remove('active')
+    }
+})
 
 
 
-// filterButtons.forEach( button => {
-//     button.addEventListener('click', e => {
-//         select = e.target.id;
-//     })
+document.getElementById('showAll').addEventListener('click', e => {
+    let taskNames = document.querySelectorAll('.todo-name');
+    taskNames.forEach( taskName => {
+        taskName.parentElement.parentElement.style.display = 'flex';
+    })
+})
 
-//     if(button.id == select) {
-//         button.classList.add('active');
-//     }
-// })
+document.getElementById('showCompleted').addEventListener('click', e => {
+    let taskNames = document.querySelectorAll('.todo-name');
+    taskNames.forEach(taskName => {
+        if(taskName.classList.contains('task-completed')) {
+            taskName.parentElement.parentElement.style.display = 'flex';
+        }
+        else{
+            taskName.parentElement.parentElement.style.display = 'none';
+        }
+    })
+})
+
+document.getElementById('showActive').addEventListener('click', e => {
+    let taskNames = document.querySelectorAll('.todo-name');
+    taskNames.forEach(taskName => {
+        if (taskName.classList.contains('task-completed')) {
+            taskName.parentElement.parentElement.style.display = 'none';
+        }
+        else {
+            taskName.parentElement.parentElement.style.display = 'flex';
+        }
+    })
+})
+
+document.getElementById('clearCompleted').addEventListener('click', e => {
+    let taskNames = document.querySelectorAll('.todo-name');
+    taskNames.forEach(taskName => {
+        if (taskName.classList.contains('task-completed')) {
+            let tasksList = document.querySelector('.hero__tasks');
+            let deleteBtn = taskName.parentElement.nextElementSibling;
+            // removing from Store
+            Store.removeTask(getIndex(deleteBtn, tasksList.children));
+            // removing form UI
+            tasksList.removeChild(taskName.parentElement.parentElement);
+        }
+    })
+})
+
+
+
+// showing items remaining 
+document.addEventListener('DOMContentLoaded', e => {
+    let taskNames = document.querySelectorAll('.todo-name');
+    let itemRemaining = 0;
+    taskNames.forEach( taskName => {
+        if(taskName.classList.contains('task-name')) {
+            itemRemaining += 1;
+        }
+    })
+    
+    document.querySelector('.info').innerText = `${itemRemaining} item(s) left`;
+})
